@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  @apply scroll-smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 0.1em;
+}
+
+.grid-layanan {
+  @apply flex flex-wrap p-6 rounded-lg transition duration-300 ease-in-out items-start bg-white shadow-md;
+}
+
+.grid-layanan-icon {
+  @apply w-12 h-12 p-3 flex items-center justify-center rounded-md text-black;
+}
+
+.navbar-item {
+  @apply flex py-2 lg:hover:bg-teal-400 lg:hover:text-white rounded-md lg:px-4 transition duration-300 ease-in-out;
+}

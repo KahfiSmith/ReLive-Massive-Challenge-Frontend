@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { setupNavbar } from ".";
+import { setupNavbar } from "./navbar";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -38,26 +38,26 @@ const Navbar = () => {
             </button>
             <nav
               id="nav-menu"
-              className="hidden absolute p-4 rounded-lg max-w-[200px] w-full right-6 top-full border border-border lg:block lg:static lg:bg-transparent lg:max-w-full lg:rounded-none lg:border-none bg-background lg:py-0 shadow-sm"
+              className="hidden absolute p-4 rounded-lg max-w-[200px] w-full right-6 top-full border border-border lg:block lg:static lg:bg-transparent lg:max-w-full lg:rounded-none lg:border-none bg-teal-400 lg:py-0 text-white lg:text-slate-700"
             >
-              <ul className="font-semibold block lg:flex lg:gap-10 lg:text-lg items-center">
+              <ul className="font-semibold block lg:flex lg:gap-4 lg:text-lg items-center">
                 <li className="group">
-                  <a href="#" className="group-hover:text-blue-500 flex py-2">
+                  <a href="#beranda" className="navbar-item">
                     Beranda
                   </a>
                 </li>
                 <li className="group">
-                  <a href="#" className="group-hover:text-blue-500 flex py-2">
+                  <a href="#tentang-kami" className="navbar-item">
                     Tentang Kami
                   </a>
                 </li>
                 <li className="group">
-                  <a href="#" className="group-hover:text-blue-500 flex py-2">
+                  <a href="#layanan" className="navbar-item">
                     Layanan
                   </a>
                 </li>
                 <li className="group">
-                  <a href="#" className="group-hover:text-blue-500 flex py-2">
+                  <a href="#artikel" className="navbar-item">
                     Artikel
                   </a>
                 </li>

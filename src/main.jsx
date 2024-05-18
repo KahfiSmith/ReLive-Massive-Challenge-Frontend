@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Navbar from "./components/Layouts/Navbar";
+import Index from "./pages";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navbar/>,
+    element: <Index />, 
   },
 ]);
 
