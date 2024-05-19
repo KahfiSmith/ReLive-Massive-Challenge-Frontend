@@ -1,7 +1,7 @@
 const Health = () => {
   return (
     <div
-      id="health"
+      id="artikel"
       className="pt-12 flex justify-center text-white bg-teal-500"
     >
       <div className="container">
@@ -51,7 +51,7 @@ const Health = () => {
             <div className="card-artikel">
               <div className="flex justify-center">
                 <img
-                  src="/images/p.png"
+                  src="/images/health4.png"
                   alt=""
                   className="w-1/2 lg:w-3/4"
                 />
