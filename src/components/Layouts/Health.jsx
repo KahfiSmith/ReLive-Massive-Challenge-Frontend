@@ -7,7 +7,7 @@ const Health = () => {
       <div className="container">
         <div className="flex flex-wrap mb-20">
           <div className="w-full self-center px-8 md:px-12 lg:px-20">
-            <h1 className="font-semibold text-2xl mb-20 md:text-3xl lg:text-4xl text-center w-full">
+            <h1 className="font-bold text-2xl mb-20 md:text-3xl lg:text-4xl text-center w-full">
               Artikel
             </h1>
           </div>
