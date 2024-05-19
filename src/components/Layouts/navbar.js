@@ -1,7 +1,4 @@
-// import { useEffect } from "react";
-
 export const setupNavbar = () => {
-//   useEffect(() => {
     const button = document.getElementById("hamburger");
     const iconMenu = document.getElementById("icon-menu");
     const iconClose = document.getElementById("icon-close");
@@ -14,8 +11,9 @@ export const setupNavbar = () => {
     };
 
     const handleScroll = () => {
-      const header = document.querySelector("header");
+      const header = document.querySelector("#navigasi");
       const fixedNav = header.offsetTop;
+      console.log(fixedNav);
 
       if (window.pageYOffset > fixedNav) {
         header.classList.add("navbar-fixed");
@@ -31,5 +29,4 @@ export const setupNavbar = () => {
       button.removeEventListener("click", handleButtonClick);
       window.removeEventListener("scroll", handleScroll);
     };
-//   }, []);
 };

@@ -1,4 +1,5 @@
 import Beranda from "../components/Layouts/Beranda"
+import Konsultasi from "../components/Layouts/Konsultasi"
 import Layanan from "../components/Layouts/Layanan"
 import Navbar from "../components/Layouts/Navbar"
 import TentangKami from "../components/Layouts/TentangKami"
@@ -10,6 +11,7 @@ const Index = () => {
         <Beranda/>
         <TentangKami/>
         <Layanan/>
+        <Konsultasi/>
         </div>
         </>
         

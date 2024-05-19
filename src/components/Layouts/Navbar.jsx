@@ -10,11 +10,11 @@ const Navbar = () => {
   });
 
   return (
-    <div className="bg-transparant absolute top-0 left-0 w-full flex items-center z-10 justify-center lg:border-b lg:border-slate-300 lg:w-full text-slate-600">
+    <div className="bg-transparant absolute top-0 left-0 w-full flex items-center z-10 justify-center  lg:w-full text-slate-600" id="navigasi">
       <div className="container">
         <div className="flex items-center justify-between relative">
           <div className="px-8 py-6 font-semibold text-lg md:text-xl lg:text-2xl lg:py-2 w-1/4">
-            <a href="#">
+            <a href="#beranda">
               <img src="/images/logo.png" alt="logo relive" className="lg:w-1/2" />
             </a>
           </div>
@@ -26,12 +26,10 @@ const Navbar = () => {
               className="absolute block lg:hidden"
             >
               <Menu
-                data-lucide="menu"
                 id="icon-menu"
                 className="transition ease-in-out duration-300"
               />
               <X
-                data-lucide="x"
                 id="icon-close"
                 className="hidden transition ease-in-out duration-300"
               />

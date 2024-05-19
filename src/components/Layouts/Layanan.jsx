@@ -1,13 +1,12 @@
 import { AudioLines, FolderLock, HandHeart } from 'lucide-react';
-import '../../index.css';
 
 const Layanan = () => {
     return (
-        <div id="layanan" className="pt-40 flex justify-center text-slate-700 mb-8">
+        <div id="layanan" className="pt-32 flex justify-center text-slate-600">
             <div className="container">
             <div className="flex flex-wrap">
                 <div className="w-full self-center px-8 md:px-12 lg:px-20">
-                    <h1 className="font-semibold text-2xl mb-20 md:text-3xl lg:text-4xl text-center w-full">
+                    <h1 className="font-bold text-2xl mb-20 md:text-3xl lg:text-4xl text-center w-full">
                         Kenapa kamu harus memilih ReLive?
                     </h1>
                     <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-10">

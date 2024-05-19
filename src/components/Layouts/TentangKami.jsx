@@ -1,9 +1,9 @@
 const TentangKami = () => {
   return (
-    <div id="tentang-kami" className="pt-10 flex justify-center min-h-screen text-slate-700">
+    <div id="tentang-kami" className="pt-32 flex justify-center min-h-screen text-slate-600">
       <div className="container">
         <div className="flex flex-wrap">
-          <h1 className="font-semibold text-2xl mb-10 md:text-3xl lg:text-4xl text-center w-full">
+          <h1 className="font-bold text-2xl mb-10 md:text-3xl lg:text-4xl text-center w-full">
             Tentang Kami
           </h1>
           <div className="w-full px-8 md:px-12 lg:px-20 lg:w-1/2">
