@@ -6,12 +6,12 @@ const Login = () => {
     }, []);
     return (
         <div className="min-h-screen flex bg-gray-100">
-            <div className="content-center hidden lg:block w-1/2 ">
+            <div className="content-center hidden md:block sm:w-full">
                 <a href="#">
-                    <img src="/images/logo.png" alt="logo relive"/>
+                    <img src="/images/logo.png" alt="logo relive" className="lg:w-3/4 md:w-3/4 m-16"/>
                 </a>
             </div>
-                <div className="content-center w-full bg-cyan-600 lg:w-1/2 p-10">
+                <div className="content-center w-full bg-cyan-600 sm:w-full p-10">
                     <h2 className="text-3xl text-white font-bold pt-10 mb-2">
                         Selamat Datang!
                     </h2>
