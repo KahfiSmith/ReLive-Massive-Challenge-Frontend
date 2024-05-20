@@ -36,3 +36,10 @@ body::-webkit-scrollbar {
   @apply text-center font-semibold sm:text-sm md:text-lg lg:text-xl;
 }
 
+.social-li {
+  @apply flex justify-center items-center h-10 w-10 text-xl rounded-full ease-out duration-300 bg-teal-500 hover:bg-teal-400 text-white;
+}
+
+.item-sidebar {
+  @apply flex items-center text-sm gap-3 font-medium p-3 hover:bg-slate-700 rounded-md;
+}
