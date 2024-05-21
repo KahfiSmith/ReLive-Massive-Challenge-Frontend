@@ -6,8 +6,8 @@ const Register = () => {
     const navigate = useNavigate();
 
     const handleLogin = (event) => {
-        event.preventDefault(); // Prevent the default form submission
-        navigate("/login"); // Redirect to the dashboard
+        event.preventDefault(); 
+        navigate("/login"); 
       };
 
     useEffect(() => {

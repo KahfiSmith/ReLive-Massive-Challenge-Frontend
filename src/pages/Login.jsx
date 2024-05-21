@@ -6,10 +6,10 @@ import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
   const handleLogin = (event) => {
-    event.preventDefault(); // Prevent the default form submission
-    navigate("/dashboard"); // Redirect to the dashboard
+    event.preventDefault(); 
+    navigate("/dashboard"); 
   };
-  
+
   useEffect(() => {
     document.title = "Login";
   }, []);
