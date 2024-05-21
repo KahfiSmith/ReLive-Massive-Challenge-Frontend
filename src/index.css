@@ -41,5 +41,5 @@ body::-webkit-scrollbar {
 }
 
 .item-sidebar {
-  @apply flex items-center text-sm gap-3 font-medium p-3 hover:bg-slate-700 rounded-md;
+  @apply flex items-center text-sm gap-3 font-medium p-3 hover:bg-[#0694A2] focus:outline-none rounded-md;
 }

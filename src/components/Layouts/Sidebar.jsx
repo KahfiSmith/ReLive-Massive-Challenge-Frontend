@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import NavbarDashboard from "../Fragments/NavbarDashboard";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
@@ -38,52 +39,55 @@ const Sidebar = () => {
     },
     { name: "Keluar", link: "/login", icon: <LogOut size={20} /> },
   ];
+
   return (
-    <section className="flex gap-6 bg-slate-500">
-      <div
-  className={`bg-slate-900 min-h-screen text-gray-100 px-4 py-4 ${
-    open ? "w-60" : "w-20"
-  } duration-500`}
->
-  <div
-    className={`flex items-center ${
-      open ? "justify-between py-3" : "justify-center py-3"
-    } duration-500`}
-  >
-    {open ? (
-      <img
-        src="/images/logo.png"
-        alt="logo"
-        className="w-1/2"
-      />
-    ) : (
-      <div className="w-1/2"></div>
-    )}
-    <Menu
-      size={26}
-      className="cursor-pointer"
-      onClick={() => setOpen(!open)}
-    />
-  </div>
-  <div className="mt-4 flex flex-col gap-4 relative">
-    {menus.map((menu, i) => (
-      <Link key={i} to={menu.link} className="item-sidebar flex items-center">
-        <div className="cursor-pointer">{menu.icon}</div>
-        <h2
-          style={{
-            transitionDelay: `${i + 1}00ms`,
-          }}
-          className={`whitespace-pre duration-500 ${
-            !open && "opacity-0 translate-x-20 overflow-hidden"
-          }`}
-        >
-          {menu?.name}
-        </h2>
-      </Link>
-    ))}
-  </div>
-</div>
-    </section>
+    <div className="min-h-screen bg-gray-100 text-slate-600">
+      <NavbarDashboard/>
+
+      <div className="flex bg-[#f8fafc]">
+        <div
+          className={`bg-[#047481] min-h-screen text-gray-100 px-4 py-4 ${
+            open ? "w-60" : "w-20"
+          } duration-500 flex-shrink-0 overflow-auto`}>
+          <div
+            className={`flex justify-end ${
+              open ? "py-3" : "justify-center py-3"
+            }`}>
+            <Menu
+              size={26}
+              className="cursor-pointer transition-transform duration-300 ease-out"
+              onClick={() => setOpen(!open)}
+            />
+          </div>
+          <div className="mt-2 flex flex-col gap-4 relative">
+            {menus.map((menu, i) => (
+              <Link key={i} to={menu.link} className="item-sidebar">
+                <div className="cursor-pointer">{menu.icon}</div>
+                <h2
+                  style={{
+                    transitionDelay: `${i + 1}00ms`,
+                  }}
+                  className={`whitespace-pre duration-500 ${
+                    !open && "opacity-0 translate-x-20 overflow-hidden"
+                  }`}
+                >
+                  {menu?.name}
+                </h2>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Main Content */}
+        <div className="flex-grow py-6 px-4">
+          <div className="text-2xl font-semibold mb-4">Profil Pasien</div>
+          <div>
+            <img src="/images/1.jpg" alt="" className="w-1/2"/>
+            
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
