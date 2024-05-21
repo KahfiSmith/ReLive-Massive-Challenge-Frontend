@@ -6,6 +6,7 @@ import Index from "./pages";
 import Dashboard from "./pages/dashboard";
 import Login from "./pages/login";
 import Register from "./pages/register";
+import Artikel from "./pages/artikel";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login/>
+  },
+  {
+    path: "/artikel",
+    element: <Artikel/>
   },
   {
     path: "/register",

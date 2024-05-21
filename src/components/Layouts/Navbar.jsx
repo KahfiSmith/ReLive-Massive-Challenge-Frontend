@@ -10,7 +10,7 @@ const Navbar = () => {
   });
 
   return (
-    <div className="bg-transparant absolute top-0 left-0 w-full flex items-center z-10 justify-center  lg:w-full border-b border-slate-200 text-slate-600" id="navigasi">
+    <div className="bg-transparant absolute top-0 left-0 w-full flex items-center z-10 justify-center  lg:w-full text-slate-600" id="navigasi">
       <div className="container">
         <div className="flex items-center justify-between relative">
           <div className="px-8 py-6 font-semibold text-lg md:text-xl lg:text-2xl lg:py-2 w-1/4">

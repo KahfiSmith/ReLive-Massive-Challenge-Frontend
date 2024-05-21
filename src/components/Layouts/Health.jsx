@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Health = () => {
   return (
     <div
@@ -12,6 +14,7 @@ const Health = () => {
             </h1>
           </div>
           <div className="grid grid-cols-1 lg:gap-6 md:grid-cols-2 lg:grid-cols-4 w-full">
+            <Link to={"/artikel"}>
             <div className="card-artikel">
               <div className="flex justify-center">
                 <img
@@ -24,6 +27,7 @@ const Health = () => {
                 <h1 className="title-artikel">Apa itu mental health?</h1>
               </div>
             </div>
+            </Link>
             <div className="card-artikel">
               <div className="flex justify-center">
                 <img

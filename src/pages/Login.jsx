@@ -1,8 +1,15 @@
 import { useEffect } from "react";
 import Logo from "../components/Layouts/Logo";
 import Button from "../components/Layouts/Button";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const handleLogin = (event) => {
+    event.preventDefault(); // Prevent the default form submission
+    navigate("/dashboard"); // Redirect to the dashboard
+  };
+  
   useEffect(() => {
     document.title = "Login";
   }, []);
@@ -16,7 +23,7 @@ const Login = () => {
         <p className="text-white text-lg mb-10 px-20">
           Konsultasi Tanpa Batas, Solusi di Ujung Jari Anda
         </p>
-        <form>
+        <form onSubmit={handleLogin}>
           <div className="mb-4 px-20">
             <label
               className="block text-white text-lg font-semibold mb-2"
@@ -50,14 +57,12 @@ const Login = () => {
           </div>
           <p className="text-white text-sm mt-10 text-center">
             Belum punya akun?
-            <a href="#" className="text-white font-semibold">
-              <span>
-                {" "}
-                <a href="#" className="text-white font-semibold">
-                  Daftar
-                </a>
-              </span>
-            </a>
+            <span>
+              {" "}
+              <Link to={"/register"} className="text-white font-semibold">
+                Daftar
+              </Link>
+            </span>
           </p>
         </form>
       </div>

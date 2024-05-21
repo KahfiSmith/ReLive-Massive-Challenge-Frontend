@@ -1,6 +1,6 @@
 const Beranda = () => {
   return (
-    <div id="home" className="pt-32 flex justify-center text-slate-600">
+    <div id="beranda" className="pt-32 flex justify-center text-slate-600">
       <div className="container">
         <div className="w-full self-center px-8 md:px-12 lg:px-20 -mb-5">
           <h1 className="font-bold text-2xl mt-3 mb-2 md:text-3xl lg:text-5xl md:text-center">
