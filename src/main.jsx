@@ -6,6 +6,9 @@ import Index from "./pages";
 import Login from "./components/Layouts/Login";
 import Register from "./components/Layouts/Register";
 import Dashboard from "./pages/dashboard";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+
 
 const router = createBrowserRouter([
   {
