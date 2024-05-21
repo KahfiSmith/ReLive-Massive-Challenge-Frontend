@@ -25,7 +25,7 @@ const Login = () => {
               Email
             </label>
             <input
-              className="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded-md w-full py-3 px-3 text-gray-600 leading-tight focus:outline-none focus:shadow-outline text-sm"
               id="email"
               type="email"
               placeholder="Masukkan Email"
@@ -39,14 +39,14 @@ const Login = () => {
               Kata Sandi
             </label>
             <input
-              className="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded-md w-full py-3 px-3 text-gray-600 leading-tight focus:outline-none focus:shadow-outline text-sm"
               id="password"
               type="password"
               placeholder="Masukkan Kata Sandi"
             />
           </div>
           <div className="px-20">
-            <Button variant="bg-gray-700">Masuk</Button>
+            <Button variant="bg-teal-500">Masuk</Button>
           </div>
           <p className="text-white text-sm mt-10 text-center">
             Belum punya akun?

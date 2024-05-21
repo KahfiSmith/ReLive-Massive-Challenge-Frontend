@@ -24,7 +24,7 @@ const Register = () => {
               Nama Pengguna
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-sm"
               id="email"
               type="email"
               placeholder="Masukkan Nama Pengguna"
@@ -38,7 +38,7 @@ const Register = () => {
               Email
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-sm"
               id="email"
               type="email"
               placeholder="Masukkan Email"
@@ -52,7 +52,7 @@ const Register = () => {
               Kata Sandi
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-sm"
               id="password"
               type="password"
               placeholder="Masukkan Kata Sandi"
@@ -61,7 +61,7 @@ const Register = () => {
           <div
             className="px-20"
           >
-            <Button variant="bg-gray-700">Daftar</Button>
+            <Button variant="bg-teal-500">Daftar</Button>
           </div>
           <p className="text-white text-sm mt-10 text-center">
             Sudah punya akun?
