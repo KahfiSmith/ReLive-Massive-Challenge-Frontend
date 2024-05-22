@@ -6,8 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
   const handleLogin = (event) => {
-    event.preventDefault(); 
-    navigate("/dashboard"); 
+    event.preventDefault();
+    navigate("/dashboardUser");
   };
 
   useEffect(() => {

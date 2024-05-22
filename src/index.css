@@ -12,7 +12,7 @@ body::-webkit-scrollbar {
 }
 
 .navbar-fixed {
-  @apply fixed z-[9999] bg-white bg-opacity-50;
+  @apply fixed z-[9999] bg-white bg-opacity-50 border-b border-slate-200;
   backdrop-filter: blur(5px);
 }
 
@@ -42,4 +42,24 @@ body::-webkit-scrollbar {
 
 .item-sidebar {
   @apply flex items-center text-sm gap-3 font-medium p-3 hover:bg-[#0694A2] focus:outline-none rounded-md;
+}
+
+.sidebar {
+  background-color: #047481;
+  min-height: calc(100vh - 64px); /* Sesuaikan dengan tinggi navbar */
+  color: #ffffff;
+  padding: 4px;
+  width: 60px; /* Atur lebar sesuai kebutuhan */
+  transition: width 0.5s;
+  overflow: hidden;
+}
+
+.navbar {
+  background-color: #ffffff;
+  color: #4a5568;
+  padding: 8px 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-bottom: 1px solid #e2e8f0;
+  position: relative; /* Jika belum diatur */
+  z-index: 10; /* Pastikan lebih tinggi dari sidebar */
 }

@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import Beranda from "../components/Layouts/Beranda"
 import Footer from "../components/Layouts/Footer"
 import Health from "../components/Layouts/Health"
@@ -6,6 +7,10 @@ import Layanan from "../components/Layouts/Layanan"
 import Navbar from "../components/Layouts/Navbar"
 import TentangKami from "../components/Layouts/TentangKami"
 const Index = () => {
+
+    useEffect(() => {
+        document.title = "Landing Page";
+      }, []);
     return (
         <>
         <div className="bg-[#f8fafc]">

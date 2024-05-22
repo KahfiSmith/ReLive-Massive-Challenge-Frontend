@@ -1,6 +1,12 @@
-const ProfilDashboard = () => {
+const ProfilUser = ({ open }) => {
   return (
-    <div className="flex-grow">
+    <div
+      className="flex-grow"
+      style={{
+        marginLeft: open ? "240px" : "80px",
+        transition: "margin-left 500ms ease-in-out",
+      }}
+    >
       <div className="relative w-full h-96 overflow-hidden">
         <div className="absolute w-full h-1/2 bg-gradient-to-r from-blue-300 via-blue-200 to-blue-100"></div>
         <div className="absolute left-1/2 bottom-[120px] transform -translate-x-1/2 translate-y-2/5 w-40 h-40 bg-white rounded-full border-4 border-white z-10">
@@ -11,8 +17,11 @@ const ProfilDashboard = () => {
           />
         </div>
       </div>
+      <div className="px-4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, eligendi. lorem1000</p>
+      </div>
     </div>
   );
 };
 
-export default ProfilDashboard;
+export default ProfilUser;

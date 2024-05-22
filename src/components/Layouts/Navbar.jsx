@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { setupNavbar } from "./nav";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   useEffect(() => {
@@ -10,12 +11,19 @@ const Navbar = () => {
   });
 
   return (
-    <div className="bg-transparant absolute top-0 left-0 w-full flex items-center z-10 justify-center  lg:w-full text-slate-600" id="navigasi">
+    <div
+      className="bg-transparant absolute top-0 left-0 w-full flex items-center z-10 justify-center  lg:w-full text-slate-600"
+      id="navigasi"
+    >
       <div className="container">
         <div className="flex items-center justify-between relative">
           <div className="px-8 py-6 font-semibold text-lg md:text-xl lg:text-2xl lg:py-2 w-1/4">
             <a href="#beranda">
-              <img src="/images/logo.png" alt="logo relive" className="lg:w-1/2" />
+              <img
+                src="/images/logo.png"
+                alt="logo relive"
+                className="lg:w-1/2"
+              />
             </a>
           </div>
           <div className="px-8 py-4 flex items-center justify-cente">
@@ -60,12 +68,12 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li className="group">
-                  <a
-                    href="#"
+                  <Link
+                    to={"/login"}
                     className="group-hover:text-icon flex py-2 lg:bg-teal-500 lg:rounded-lg lg:px-8 lg:group-hover:text-white lg:group-hover:bg-teal-400 lg:text-white"
                   >
                     Masuk
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>

@@ -2,7 +2,7 @@ import { Facebook, Instagram, Linkedin, Mail, Phone, Youtube } from "lucide-reac
 
 const Footer = () => {
   return (
-    <div className="flex justify-center text-slate-600 pb-20">
+    <div className="flex justify-center text-slate-600 pb-20 border-t border-slate-200">
       <div className="container">
         <div className="flex flex-wrap">
           <div className="w-full px-8 md:px-12 lg:px-20 lg:w-full ">
@@ -56,7 +56,7 @@ const Footer = () => {
             </div>
             <div className="flex justify-between">
               <div>
-                <p>Copyright © 2022 - ReLive. All rights reserved.</p>
+                <p>Copyright ©2024 - ReLive. All rights reserved.</p>
               </div>
               <div>
                 <ul className="flex flex-row gap-4">
