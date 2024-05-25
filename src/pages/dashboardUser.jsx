@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import NavbarDashboard from "../components/Fragments/NavbarDashboard";
 import Sidebar from "../components/Layouts/Sidebar";
-import ProfilDashboard from "../components/Layouts/ProfilUser";
+import ProfilDashboard from "../components/DashboardUser/ProfilUser";
 const DashboardUser = () => {
     const [open, setOpen] = useState(true);
     useEffect(() => {

@@ -7,6 +7,9 @@ import Login from "./pages/login";
 import Register from "./pages/register";
 import Artikel from "./pages/artikel1";
 import DashboardUser from "./pages/dashboardUser";
+import Artikel2 from "./pages/artikel2";
+import Artikel4 from "./pages/artikel4";
+import Artikel3 from "./pages/artikel3";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +23,18 @@ const router = createBrowserRouter([
   {
     path: "/artikel1",
     element: <Artikel/>
+  },
+  {
+    path: "/artikel2",
+    element: <Artikel2/>
+  },
+  {
+    path: "/artikel3",
+    element: <Artikel3/>
+  },
+  {
+    path: "/artikel4",
+    element: <Artikel4/>
   },
   {
     path: "/register",

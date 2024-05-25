@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import ArtikelLayouts from "../components/Layouts/ArtikelLayouts";
 import Footer from "../components/Fragments/Footer";
 import Navbar from "../components/Layouts/Navbar";
+import ArtikelLayouts1 from "../components/Layouts/ArtikelLayouts1";
 
 const Artikel1 = () => {
   useEffect(() => {
@@ -10,7 +10,7 @@ const Artikel1 = () => {
   return (
     <div>
       <Navbar />
-      <ArtikelLayouts />
+      <ArtikelLayouts1 />
       <Footer />
     </div>
   );

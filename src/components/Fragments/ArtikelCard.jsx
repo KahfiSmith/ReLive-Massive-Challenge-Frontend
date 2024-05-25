@@ -8,14 +8,17 @@ const ArtikelCard = () => {
       title: "Apa itu mental health?",
     },
     {
+      link: "/artikel2",
       imgSrc: "/images/health2.png",
       title: "Apa itu konseling? dan apa saja jenisnya?",
     },
     {
+      link: "/artikel3",
       imgSrc: "/images/health3.png",
       title: "Contoh gangguan kesehatan mental",
     },
     {
+      link: "/artikel4",
       imgSrc: "/images/health4.png",
       title: "Breaking the stigma",
     },
