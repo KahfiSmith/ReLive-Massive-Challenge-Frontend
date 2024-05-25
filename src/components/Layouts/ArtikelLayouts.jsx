@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { MoveLeft } from "lucide-react";
 
 const ArtikelLayouts = () => {
+
+
   return (
     <div id="artikel">
       <div className="relative w-full max-h-full text-slate-600 mb-[42rem]">
@@ -91,18 +93,17 @@ const ArtikelLayouts = () => {
                 className="w-16 h-16"
               />
               <div className="ml-4">
-                <h3 className="text-lg font-semibold">
-                  Breaking the stigma
-                </h3>
+                <h3 className="text-lg font-semibold">Breaking the stigma</h3>
                 <p className="text-gray-500">Technical advisor</p>
               </div>
             </div>
-            <Link to={"/"}
-              href="#"
-              className="text-gray-600 my-5 ml-2 font-medium hover:text-gray-900"
+            <button
+              onClick={() => window.history.back()}
+              className="text-gray-600 my-5 ml-2 font-medium hover:text-gray-900 flex flex-row gap-2 items-center"
             >
-              &larr; Kembali
-            </Link>
+              <MoveLeft />
+              <span>Kembali</span>
+            </button>
           </div>
         </div>
       </div>

@@ -10,6 +10,13 @@ const Navbar = () => {
     return cleanup;
   });
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div
       className="bg-transparant absolute top-0 left-0 w-full flex items-center z-10 justify-center  lg:w-full text-slate-600"
@@ -18,7 +25,7 @@ const Navbar = () => {
       <div className="container">
         <div className="flex items-center justify-between relative">
           <div className="px-8 py-6 font-semibold text-lg md:text-xl lg:text-2xl lg:py-2 w-1/4">
-            <a href="#beranda">
+            <a href="#beranda" onClick={scrollToTop}>
               <img
                 src="/images/logo.png"
                 alt="logo relive"

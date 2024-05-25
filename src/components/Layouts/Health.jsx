@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import ArtikelCard from "../Fragments/ArtikelCard";
 
 const Health = () => {
   return (
@@ -13,56 +13,7 @@ const Health = () => {
               Artikel
             </h1>
           </div>
-          <div className="grid grid-cols-1 lg:gap-6 md:grid-cols-2 lg:grid-cols-4 w-full">
-            <Link to={"/artikel"}>
-            <div className="card-artikel">
-              <div className="flex justify-center">
-                <img
-                  src="/images/health1.png"
-                  alt=""
-                  className="w-1/2 lg:w-3/4"
-                />
-              </div>
-              <div>
-                <h1 className="title-artikel">Apa itu mental health?</h1>
-              </div>
-            </div>
-            </Link>
-            <div className="card-artikel">
-              <div className="flex justify-center">
-                <img
-                  src="/images/health2.png"
-                  alt=""
-                  className="w-1/2 lg:w-3/4"
-                />
-              </div>
-              <h1 className="title-artikel">
-                Apa itu konseling? dan apa saja jenisnya?
-              </h1>
-            </div>
-            <div className="card-artikel">
-              <div className="flex justify-center">
-                <img
-                  src="/images/health3.png"
-                  alt=""
-                  className="w-1/2 lg:w-3/4"
-                />
-              </div>
-              <h1 className="title-artikel">
-                Contoh gangguan kesehatan mental
-              </h1>
-            </div>
-            <div className="card-artikel">
-              <div className="flex justify-center">
-                <img
-                  src="/images/health4.png"
-                  alt=""
-                  className="w-1/2 lg:w-3/4"
-                />
-              </div>
-              <h1 className="title-artikel">Breaking the stigma</h1>
-            </div>
-          </div>
+          <ArtikelCard/>
         </div>
       </div>
     </div>
