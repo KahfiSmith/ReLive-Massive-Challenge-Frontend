@@ -7,7 +7,7 @@ const Login = () => {
   const navigate = useNavigate();
   const handleLogin = (event) => {
     event.preventDefault();
-    navigate("/dashboardUser");
+    navigate("/dashboard-user");
   };
 
   useEffect(() => {
