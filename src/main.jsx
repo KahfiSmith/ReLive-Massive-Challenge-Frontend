@@ -10,6 +10,7 @@ import DashboardUser from "./pages/dashboardUser";
 import Artikel2 from "./pages/artikel2";
 import Artikel4 from "./pages/artikel4";
 import Artikel3 from "./pages/artikel3";
+import DetailRiwayat from "./pages/detail-riwayat";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard-user",
     element: <DashboardUser />, 
+  },
+  {
+    path: "/detail-riwayat",
+    element: <DetailRiwayat/>, 
   },
 ]);
 
