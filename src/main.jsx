@@ -7,6 +7,9 @@ import Login from "./pages/login";
 import Register from "./pages/register";
 import Artikel from "./pages/artikel1";
 import DashboardUser from "./pages/dashboardUser";
+import ChatUser from "./pages/chatUser";
+import Chat2User from "./pages/Chat2User";
+import RiwayatUser from "./pages/riwayatUser";
 import Artikel2 from "./pages/artikel2";
 import Artikel4 from "./pages/artikel4";
 import Artikel3 from "./pages/artikel3";
@@ -41,8 +44,20 @@ const router = createBrowserRouter([
     element: <Register/>
   },
   {
-    path: "/dashboardUser",
+    path: "/dashboard-user",
     element: <DashboardUser />, 
+  },
+  {
+    path: "/chat",
+    element: <ChatUser />, 
+  },
+  {
+    path: "/riwayat",
+    element: <RiwayatUser />, 
+  },
+  {
+    path: "/column-chat",
+    element: <Chat2User />, 
   },
 ]);
 
