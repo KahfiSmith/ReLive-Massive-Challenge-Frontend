@@ -6,13 +6,14 @@ import Index from "./pages";
 import Login from "./pages/login";
 import Register from "./pages/register";
 import Artikel from "./pages/artikel1";
-import DashboardUser from "./pages/dashboardUser";
-import ChatUser from "./pages/chatUser";
-import Chat2User from "./pages/Chat2User";
-import RiwayatUser from "./pages/riwayatUser";
 import Artikel2 from "./pages/artikel2";
 import Artikel4 from "./pages/artikel4";
 import Artikel3 from "./pages/artikel3";
+import ProfilUserPage from "./pages/profilUser";
+import ChatUserPage from "./pages/chatUser";
+import ChatDetailUserPage from "./pages/chatDetailUser";
+import RiwayatUserPage from "./pages/riwayatUser";
+import ProfilUserEditPage from "./pages/profilUserEdit";
 
 const router = createBrowserRouter([
   {
@@ -44,20 +45,24 @@ const router = createBrowserRouter([
     element: <Register/>
   },
   {
-    path: "/dashboard-user",
-    element: <DashboardUser />, 
+    path: "/profil-user",
+    element: <ProfilUserPage />, 
   },
   {
-    path: "/chat",
-    element: <ChatUser />, 
+    path: "/profil-user-edit",
+    element: <ProfilUserEditPage />, 
   },
   {
-    path: "/riwayat",
-    element: <RiwayatUser />, 
+    path: "/chat-user",
+    element: <ChatUserPage />, 
   },
   {
-    path: "/column-chat",
-    element: <Chat2User />, 
+    path: "/riwayat-user",
+    element: <RiwayatUserPage />, 
+  },
+  {
+    path: "/detail-chat-user",
+    element: <ChatDetailUserPage />, 
   },
 ]);
 

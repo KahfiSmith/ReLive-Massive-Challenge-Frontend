@@ -1,4 +1,4 @@
-import CardChat from "../Layouts/CardChat";
+import CardChat from "../Fragments/CardChat";
 
 const ChatUser = ({ open }) => {
   return (
@@ -9,12 +9,11 @@ const ChatUser = ({ open }) => {
         transition: "margin-left 500ms ease-in-out",
       }}
     >
-        <CardChat />
-        <CardChat />
-        <CardChat />
-        <CardChat />
-        <CardChat />
-
+      <CardChat />
+      <CardChat />
+      <CardChat />
+      <CardChat />
+      <CardChat />
     </div>
   );
 };

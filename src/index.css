@@ -46,10 +46,10 @@ body::-webkit-scrollbar {
 
 .sidebar {
   background-color: #047481;
-  min-height: calc(100vh - 64px); /* Sesuaikan dengan tinggi navbar */
+  min-height: calc(100vh - 64px); 
   color: #ffffff;
   padding: 4px;
-  width: 60px; /* Atur lebar sesuai kebutuhan */
+  width: 60px; 
   transition: width 0.5s;
   overflow: hidden;
 }
@@ -60,6 +60,10 @@ body::-webkit-scrollbar {
   padding: 8px 16px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   border-bottom: 1px solid #e2e8f0;
-  position: relative; /* Jika belum diatur */
-  z-index: 10; /* Pastikan lebih tinggi dari sidebar */
+  position: relative; 
+  z-index: 10; 
+}
+
+.placeholder-user::placeholder {
+  @apply text-slate-600;
 }

@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
 import NavbarDashboard from "../components/Fragments/NavbarDashboard";
 import Sidebar from "../components/Layouts/Sidebar";
-import ChatUser from "../components/Layouts/ChatUser";
-const ChatUserPage = () => {
+import EditProfilUser from "../components/DashboardUser/EditProfilUser";
+const ProfilUserEditPage = () => {
   const [open, setOpen] = useState(true);
   useEffect(() => {
-    document.title = "Chat";
+    document.title = "Edit Profil";
   }, []);
   return (
     <div className="min-h-screen text-slate-600">
       <NavbarDashboard />
       <div className="flex bg-light pt-20">
         <Sidebar open={open} setOpen={setOpen} />
-        <ChatUser open={open} />
+        <EditProfilUser open={open} />
       </div>
     </div>
   );
 };
 
-export default ChatUserPage;
+export default ProfilUserEditPage;

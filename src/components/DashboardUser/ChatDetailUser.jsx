@@ -1,6 +1,6 @@
 import ChatColumn from "../Layouts/ChatColumn";
 
-const Chat2User = ({ open }) => {
+const ChatDetailUser = ({ open }) => {
   return (
     <div
       className="flex-grow"
@@ -15,4 +15,4 @@ const Chat2User = ({ open }) => {
   );
 };
 
-export default Chat2User;
+export default ChatDetailUser;

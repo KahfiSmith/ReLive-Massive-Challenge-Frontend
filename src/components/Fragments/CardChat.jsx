@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const CardChat = () => {
   return (
-    <Link to="/column-chat">
+    <Link to="/detail-chat-user">
       <div className="w-max-screen my-4 mx-auto bg-cyan-700 text-white rounded-lg p-5 flex items-center cursor-pointer hover:bg-cyan-600 transition duration-200">
         <img className="rounded-full w-16 h-16 mr-4" src="https://via.placeholder.com/60" alt="Profile Picture" />
         <div className="flex-grow">

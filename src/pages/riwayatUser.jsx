@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import NavbarDashboard from "../components/Fragments/NavbarDashboard";
 import Sidebar from "../components/Layouts/Sidebar";
 import RiwayatDashboard from "../components/DashboardUser/RiwayatUser";
-const RiwayatUser = () => {
+const RiwayatUserPage = () => {
     const [open, setOpen] = useState(true);
     useEffect(() => {
         document.title = "Chat";
@@ -18,4 +18,4 @@ const RiwayatUser = () => {
       );
 }
 
-export default RiwayatUser
+export default RiwayatUserPage

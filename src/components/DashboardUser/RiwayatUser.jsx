@@ -1,4 +1,4 @@
-import CardRiwayat from "../Layouts/CardRiwayat";
+import CardRiwayat from "../Fragments/CardRiwayat";
 const RiwayatUser = ({ open }) => {
   return (
     <div
@@ -13,7 +13,6 @@ const RiwayatUser = ({ open }) => {
         <CardRiwayat />
         <CardRiwayat />
         <CardRiwayat />
-
     </div>
   );
 };

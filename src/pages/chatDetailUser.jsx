@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import NavbarDashboard from "../components/Fragments/NavbarDashboard";
 import Sidebar from "../components/Layouts/Sidebar";
-import Chat2Dashboard from "../components/DashboardUser/Chat2User";
-const Chat2User = () => {
+import ChatDetailUser from "../components/DashboardUser/ChatDetailUser";
+const ChatDetailUserPage = () => {
     const [open, setOpen] = useState(true);
     useEffect(() => {
         document.title = "Chat";
@@ -12,10 +12,10 @@ const Chat2User = () => {
           <NavbarDashboard />
           <div className="flex bg-light pt-20">
             <Sidebar open={open} setOpen={setOpen}/>
-            <Chat2Dashboard open={open}/>
+            <ChatDetailUser open={open}/>
           </div>
         </div>
       );
 }
 
-export default Chat2User
+export default ChatDetailUserPage

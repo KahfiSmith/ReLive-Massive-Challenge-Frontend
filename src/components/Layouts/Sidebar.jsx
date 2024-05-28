@@ -4,7 +4,6 @@ import {
   LogOut,
   Menu,
   MessageSquareText,
-  NotepadText,
   UserPlus,
   UserSearch,
 } from "lucide-react";
@@ -15,24 +14,19 @@ const Sidebar = ({ open, setOpen }) => {
   const menus = [
     {
       name: "Profil",
-      link: "/profil",
+      link: "/profil-user",
       icon: <CircleUser size={20} />,
     },
     {
       name: "Pilih Psikolog",
-      link: "/pilih-psikolog",
+      link: "/pilih-psikolog-user",
       icon: <UserSearch size={20} />,
     },
-    { name: "Chat", link: "/chat", icon: <MessageSquareText size={20} /> },
-    {
-      name: "Hasil Konsultasi",
-      link: "/hasil-konsultasi",
-      icon: <NotepadText size={20} />,
-    },
-    { name: "Riwayat", link: "/riwayat", icon: <History size={20} /> },
+    { name: "Chat", link: "/chat-user", icon: <MessageSquareText size={20} /> },
+    { name: "Riwayat", link: "/riwayat-user", icon: <History size={20} /> },
     {
       name: "Kawan ReLive",
-      link: "/kawan-relive",
+      link: "/kawan-relive-user",
       icon: <UserPlus size={20} />,
     },
     { name: "Keluar", link: "/", icon: <LogOut size={20} /> },
