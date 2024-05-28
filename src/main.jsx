@@ -18,51 +18,51 @@ import ProfilUserEditPage from "./pages/profilUserEdit";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Index />, 
+    element: <Index />,
   },
   {
     path: "/login",
-    element: <Login/>
+    element: <Login />,
   },
   {
     path: "/artikel1",
-    element: <Artikel/>
+    element: <Artikel />,
   },
   {
     path: "/artikel2",
-    element: <Artikel2/>
+    element: <Artikel2 />,
   },
   {
     path: "/artikel3",
-    element: <Artikel3/>
+    element: <Artikel3 />,
   },
   {
     path: "/artikel4",
-    element: <Artikel4/>
+    element: <Artikel4 />,
   },
   {
     path: "/register",
-    element: <Register/>
+    element: <Register />,
   },
   {
     path: "/profil-user",
-    element: <ProfilUserPage />, 
+    element: <ProfilUserPage />,
   },
   {
     path: "/profil-user-edit",
-    element: <ProfilUserEditPage />, 
+    element: <ProfilUserEditPage />,
   },
   {
     path: "/chat-user",
-    element: <ChatUserPage />, 
+    element: <ChatUserPage />,
   },
   {
     path: "/riwayat-user",
-    element: <RiwayatUserPage />, 
+    element: <RiwayatUserPage />,
   },
   {
     path: "/detail-chat-user",
-    element: <ChatDetailUserPage />, 
+    element: <ChatDetailUserPage />,
   },
 ]);
 
