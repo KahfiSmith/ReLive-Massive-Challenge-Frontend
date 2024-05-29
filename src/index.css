@@ -67,3 +67,7 @@ body::-webkit-scrollbar {
 .placeholder-user::placeholder {
   @apply text-slate-600;
 }
+
+.online {
+  @apply h-3 w-3 bg-teal-400 rounded-full
+}

@@ -13,8 +13,8 @@ import ProfilUserPage from "./pages/profilUser";
 import ChatUserPage from "./pages/chatUser";
 import ChatDetailUserPage from "./pages/chatDetailUser";
 import RiwayatUserPage from "./pages/riwayatUser";
-import ProfilUserEditPage from "./pages/profilUserEdit";
 import RiwayatDetailUserPage from "./pages/riwayatDetailUser";
+import PilihPsikologUserPage from "./pages/pilihPsikologUser";
 
 const router = createBrowserRouter([
   {
@@ -50,8 +50,8 @@ const router = createBrowserRouter([
     element: <ProfilUserPage />,
   },
   {
-    path: "/profil-user-edit",
-    element: <ProfilUserEditPage />,
+    path: "/pilih-psikolog-user",
+    element: <PilihPsikologUserPage />,
   },
   {
     path: "/chat-user",
