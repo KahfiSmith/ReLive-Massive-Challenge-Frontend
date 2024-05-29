@@ -1,6 +1,6 @@
 import CardPilihPsikiater from "../Fragments/CardPilihPsikolog";
 
-const PilihPsikologUser = () => {
+const PilihPsikologUser = ({open}) => {
   return (
     <div
       className="flex-grow"
@@ -9,7 +9,7 @@ const PilihPsikologUser = () => {
         transition: "margin-left 500ms ease-in-out",
       }}
     >
-      <div className="grid grid-cols-2 px-12 py-12 justify-between gap-12">
+      <div className="grid grid-cols-2 px-12 py-12 justify-between mb-8">
         <CardPilihPsikiater/>
         <CardPilihPsikiater/>
         <CardPilihPsikiater/>

@@ -15,6 +15,7 @@ import ChatDetailUserPage from "./pages/chatDetailUser";
 import RiwayatUserPage from "./pages/riwayatUser";
 import RiwayatDetailUserPage from "./pages/riwayatDetailUser";
 import PilihPsikologUserPage from "./pages/pilihPsikologUser";
+import PilihDetailPsikologUserPage from "./pages/pilihDetailPsikologUser";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
   {
     path: "/pilih-psikolog-user",
     element: <PilihPsikologUserPage />,
+  },
+  {
+    path: "/detail-pilih-psikolog-user",
+    element: <PilihDetailPsikologUserPage />,
   },
   {
     path: "/chat-user",
