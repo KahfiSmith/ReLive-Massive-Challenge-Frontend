@@ -14,6 +14,7 @@ import ChatUserPage from "./pages/chatUser";
 import ChatDetailUserPage from "./pages/chatDetailUser";
 import RiwayatUserPage from "./pages/riwayatUser";
 import ProfilUserEditPage from "./pages/profilUserEdit";
+import RiwayatDetailUserPage from "./pages/riwayatDetailUser";
 
 const router = createBrowserRouter([
   {
@@ -57,12 +58,16 @@ const router = createBrowserRouter([
     element: <ChatUserPage />,
   },
   {
+    path: "/detail-chat-user",
+    element: <ChatDetailUserPage />,
+  },
+  {
     path: "/riwayat-user",
     element: <RiwayatUserPage />,
   },
   {
-    path: "/detail-chat-user",
-    element: <ChatDetailUserPage />,
+    path: "/detail-riwayat-user",
+    element: <RiwayatDetailUserPage />,
   },
 ]);
 

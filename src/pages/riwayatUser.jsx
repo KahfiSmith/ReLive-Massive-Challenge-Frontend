@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import NavbarDashboard from "../components/Fragments/NavbarDashboard";
 import Sidebar from "../components/Layouts/Sidebar";
-import RiwayatDashboard from "../components/DashboardUser/RiwayatUser";
+import RiwayatUser from "../components/DashboardUser/RiwayatUser";
 const RiwayatUserPage = () => {
     const [open, setOpen] = useState(true);
     useEffect(() => {
@@ -12,7 +12,7 @@ const RiwayatUserPage = () => {
           <NavbarDashboard />
           <div className="flex bg-light pt-20">
             <Sidebar open={open} setOpen={setOpen}/>
-            <RiwayatDashboard open={open}/>
+            <RiwayatUser open={open}/>
           </div>
         </div>
       );

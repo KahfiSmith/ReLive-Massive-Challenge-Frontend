@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Sidebar from "../components/Layouts/Sidebar";
 import DetailRiwayat from "../components/DashboardUser/DetailRiwayat";
 
-const Detail = () => {
+const RiwayatDetailUserPage = () => {
     const [open, setOpen] = useState(true);
     useEffect(() => {
         document.title = "Detail Riwayat";
@@ -17,4 +17,4 @@ const Detail = () => {
 );
 }
 
-export default Detail;
+export default RiwayatDetailUserPage;
