@@ -1,4 +1,6 @@
-const DetailPilihPsikolog = ({open}) => {
+import { Link } from "react-router-dom";
+
+const DetailPilihPsikolog = ({ open }) => {
   return (
     <div
       className="flex-grow"
@@ -21,7 +23,7 @@ const DetailPilihPsikolog = ({open}) => {
               Profil Psikolog
             </h1>
             <h2 className="text-slate-600 font-semibold text-3xl mb-4">
-              Mas Amba
+              Max Verstappen
             </h2>
             <p className="text-slate-600 font-medium text-lg leading-[2rem]">
               Daffa Lee Hao adalah psikolog kelahiran 24 Mei 2001 di Batam. Ia
@@ -35,28 +37,28 @@ const DetailPilihPsikolog = ({open}) => {
         <div className="grid grid-cols-2 gap-6 px-12 items-center mb-6">
           <div className="p-5">
             <ul className="list-disc pl-5 leading-6 text-xl">
-              <li className="font-semibold mb-3">
-                Psikolog Terpercaya
-              </li>
-              <li className="font-semibold mb-3">
-                Ramah dan dapat diandalkan
-              </li>
+              <li className="font-semibold mb-3">Psikolog Terpercaya</li>
+              <li className="font-semibold mb-3">Ramah dan dapat diandalkan</li>
               <li className="font-semibold mb-3">
                 Berpengalaman dengan pasien yang memiliki mental issues
               </li>
-              <li className="font-semibold mb-3">
-                Teman terbaik anda
-              </li>
+              <li className="font-semibold mb-3">Teman terbaik anda</li>
             </ul>
           </div>
           <div className="px-5 py-8 bg-teal-500 rounded-md text-white flex items-center text-lg">
-            <p>Anda bukanlah penyakit Anda. Anda memiliki cerita pribadi untuk diceritakan. Anda memiliki nama, sejarah, kepribadian. Tetap menjadi diri sendiri adalah bagian dari perjuangan.</p>
+            <p>
+              Anda bukanlah penyakit Anda. Anda memiliki cerita pribadi untuk
+              diceritakan. Anda memiliki nama, sejarah, kepribadian. Tetap
+              menjadi diri sendiri adalah bagian dari perjuangan.
+            </p>
           </div>
         </div>
         <div className="px-12 mb-20">
+          <Link to={"/pilih-psikolog-user"}>
             <span className="bg-teal-500 rounded-bl-full rounded-tr-full py-3 px-12 font-medium text-white text-lg">
-                kembali
+              Kembali
             </span>
+          </Link>
         </div>
       </div>
     </div>
