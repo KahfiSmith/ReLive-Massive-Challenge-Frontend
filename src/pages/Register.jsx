@@ -66,6 +66,19 @@ const Register = () => {
                             placeholder="Masukkan Kata Sandi"
                         />
                     </div>
+                    <div className="mb-4 px-20">
+                        <label
+                            className="block text-white text-lg font-semibold mb-2"
+                            htmlFor="email"
+                        >
+                            Jenis Kelamin
+                        </label>
+                        <select className="w-full h-10" name="gender" required>
+                            <option value="" disabled selected>-</option>
+                            <option value="male">Laki-Laki</option>
+                            <option value="female">Perempuan</option>
+                        </select>
+                    </div>
                     <div to
                         className="px-20"
                     >

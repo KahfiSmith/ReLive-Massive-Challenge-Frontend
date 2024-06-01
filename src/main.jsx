@@ -20,6 +20,9 @@ import KawanRelivePage from "./pages/KawanRelive";
 import ChatPsikologPage from "./pages/chatPsikolog";
 import ChatDetailPsikologPage from "./pages/chatDetailPsikolog";
 import DetailKomunitasPage from "./pages/detailKomunitas";
+import RiwayatPsikologPage from "./pages/riwayatPskiolog";
+import RiwayatDetailPsikologPage from "./pages/riwayatDetailPsikolog";
+import HasilKonsultasiPage from "./pages/hasilkonsultasi";
 
 const router = createBrowserRouter([
   {
@@ -93,6 +96,18 @@ const router = createBrowserRouter([
   {
     path: "/detail-komunitas-user",
     element: <DetailKomunitasPage />,
+  },
+  {
+    path: "/riwayat-psikolog",
+    element: <RiwayatPsikologPage />,
+  },
+  {
+    path: "/detail-riwayat-psikolog",
+    element: <RiwayatDetailPsikologPage />,
+  },
+  {
+    path: "/hasil-konsultasi",
+    element: <HasilKonsultasiPage/>,
   },
 ]);
 
