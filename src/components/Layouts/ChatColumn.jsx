@@ -1,10 +1,15 @@
-import { CircleCheck } from 'lucide-react';
+import { CircleCheck  } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Column from './Column';
 const ChatColumn = () => {
   return (
     <div className="flex flex-col h-screen bg-gray-100">
       <header className="bg-teal-500 text-white p-4 flex justify-between items-center">
-        <div className="text-lg md:text-xl font-semibold">Ms. Syindy Lee</div>
+        <div className='flex flex-row items-center gap-5'>
+          <Link to="/chat-user"><ChevronLeft color='#fff' /></Link>
+          <div className="text-lg md:text-xl font-semibold">Ms. Syindy Lee</div>
+        </div>
         <div className="flex items-center">
           <div className="mr-2">Online</div>
           <div className="w-3 h-3 bg-green-500 rounded-full"></div>

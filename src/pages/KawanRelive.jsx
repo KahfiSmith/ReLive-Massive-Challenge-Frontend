@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import NavbarDashboard from "../components/Fragments/NavbarDashboard";
 import Sidebar from "../components/Layouts/Sidebar";
-import ChatUser from "../components/DashboardUser/ChatUser";
-const ChatUserPage = () => {
+import Komunitas from "../components/DashboardUser/Komunitas";
+
+const KawanRelivePage = () => {
   const [open, setOpen] = useState(true);
   useEffect(() => {
     document.title = "Chat";
@@ -12,10 +13,10 @@ const ChatUserPage = () => {
       <NavbarDashboard />
       <div className="flex bg-light pt-20">
         <Sidebar open={open} setOpen={setOpen} />
-        <ChatUser open={open} />
+        <Komunitas open={open} />
       </div>
     </div>
   );
 };
 
-export default ChatUserPage;
+export default KawanRelivePage;

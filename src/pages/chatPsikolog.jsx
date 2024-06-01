@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import NavbarDashboard from "../components/Fragments/NavbarDashboard";
-import Sidebar from "../components/Layouts/Sidebar";
-import ChatUser from "../components/DashboardUser/ChatUser";
-const ChatUserPage = () => {
+import Sidebar2 from "../components/Layouts/Sidebar";
+import ChatPsikolog from "../components/DashboardPsikolog/ChatPsikolog";
+const ChatPsikologPage = () => {
   const [open, setOpen] = useState(true);
   useEffect(() => {
     document.title = "Chat";
@@ -11,11 +11,11 @@ const ChatUserPage = () => {
     <div className="min-h-screen text-slate-600">
       <NavbarDashboard />
       <div className="flex bg-light pt-20">
-        <Sidebar open={open} setOpen={setOpen} />
-        <ChatUser open={open} />
+        <Sidebar2 open={open} setOpen={setOpen} />
+        <ChatPsikolog open={open} />
       </div>
     </div>
   );
 };
 
-export default ChatUserPage;
+export default ChatPsikologPage;

@@ -16,6 +16,10 @@ import RiwayatUserPage from "./pages/riwayatUser";
 import RiwayatDetailUserPage from "./pages/riwayatDetailUser";
 import PilihPsikologUserPage from "./pages/pilihPsikologUser";
 import PilihDetailPsikologUserPage from "./pages/pilihDetailPsikologUser";
+import KawanRelivePage from "./pages/KawanRelive";
+import ChatPsikologPage from "./pages/chatPsikolog";
+import ChatDetailPsikologPage from "./pages/chatDetailPsikolog";
+import DetailKomunitasPage from "./pages/detailKomunitas";
 
 const router = createBrowserRouter([
   {
@@ -73,6 +77,22 @@ const router = createBrowserRouter([
   {
     path: "/detail-riwayat-user",
     element: <RiwayatDetailUserPage />,
+  },
+  {
+    path: "/kawan-relive-user",
+    element: <KawanRelivePage />,
+  },
+  {
+    path: "/chat-psikolog",
+    element: <ChatPsikologPage />,
+  },
+  {
+    path: "/detail-chat-psikolog",
+    element: <ChatDetailPsikologPage />,
+  },
+  {
+    path: "/detail-komunitas-user",
+    element: <DetailKomunitasPage />,
   },
 ]);
 
