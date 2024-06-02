@@ -4,7 +4,6 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from "./pages";
 import Login from "./pages/login";
-import Register from "./pages/register";
 import Artikel from "./pages/artikel1";
 import Artikel2 from "./pages/artikel2";
 import Artikel4 from "./pages/artikel4";
@@ -16,13 +15,16 @@ import RiwayatUserPage from "./pages/riwayatUser";
 import RiwayatDetailUserPage from "./pages/riwayatDetailUser";
 import PilihPsikologUserPage from "./pages/pilihPsikologUser";
 import PilihDetailPsikologUserPage from "./pages/pilihDetailPsikologUser";
-import KawanRelivePage from "./pages/KawanRelive";
+import KawanRelivePage from "./pages/kawanRelive";
 import ChatPsikologPage from "./pages/chatPsikolog";
 import ChatDetailPsikologPage from "./pages/chatDetailPsikolog";
 import DetailKomunitasPage from "./pages/detailKomunitas";
 import RiwayatPsikologPage from "./pages/riwayatPskiolog";
 import RiwayatDetailPsikologPage from "./pages/riwayatDetailPsikolog";
-import HasilKonsultasiPage from "./pages/hasilkonsultasi";
+import HasilKonsultasiPage from "./pages/hasilKonsultasi";
+import Register from "./pages/register";
+import ProfilPsikologPage from "./pages/profilPsikolog";
+import ProfilDetailPsikologPage from "./pages/profilDetailPsikolog";
 
 const router = createBrowserRouter([
   {
@@ -108,6 +110,14 @@ const router = createBrowserRouter([
   {
     path: "/hasil-konsultasi",
     element: <HasilKonsultasiPage/>,
+  },
+  {
+    path: "/profil-psikolog",
+    element: <ProfilPsikologPage />,
+  },
+  {
+    path: "/detail-profil-psikolog",
+    element: <ProfilDetailPsikologPage />,
   },
 ]);
 

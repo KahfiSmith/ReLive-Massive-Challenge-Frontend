@@ -11,26 +11,26 @@ const CardUserProfil = () => {
           </label>
           <input
             type="text"
-            placeholder="ambatublow"
-            className="w-full p-2 border-2 border-slate-500 rounded-md text-lg placeholder-user opacity-50 font-base italic"
+            placeholder="John Doe"
+            className="w-full p-2 border-2 border-slate-500 rounded-md text-lg placeholder-user opacity-50 font-base"
           />
         </div>
         <div className="w-full mb-4">
           <label
-            htmlFor="Umur"
+            htmlFor="tanggal-lahir"
             className="block font-semibold text-slate-500 text-xl mb-2"
           >
             Tanggal Lahir
           </label>
           <input
-            type="text"
+            type="date"
             placeholder="22 Februari 2002"
             className="w-full p-2 border-2 border-slate-500 rounded-md text-lg placeholder-user opacity-50 font-medium"
           />
         </div>
         <div className="w-full mb-4">
           <label
-            htmlFor="Tanggal Lahir"
+            htmlFor="umur"
             className="block font-semibold text-slate-500 text-xl mb-2"
           >
             Umur
@@ -39,6 +39,7 @@ const CardUserProfil = () => {
             type="text"
             placeholder="20 Tahun"
             className="w-full p-2 border-2 border-slate-500 rounded-md text-lg placeholder-user opacity-50 font-medium"
+            readOnly
           />
         </div>
         <div className="w-full">

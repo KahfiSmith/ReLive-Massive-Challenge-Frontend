@@ -11,10 +11,10 @@ const SidebarPsikolog = ({ open, setOpen }) => {
   const menus = [
     {
       name: "Profil",
-      link: "",
+      link: "/profil-psikolog",
       icon: <CircleUser size={20} />,
     },
-    { name: "Chat", link: "", icon: <MessageSquareText size={20} /> },
+    { name: "Chat", link: "/chat-psikolog", icon: <MessageSquareText size={20} /> },
     { name: "Riwayat", link: "/riwayat-psikolog", icon: <History size={20} /> },
     { name: "Keluar", link: "/", icon: <LogOut size={20} /> },
   ];

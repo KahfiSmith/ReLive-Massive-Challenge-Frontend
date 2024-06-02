@@ -53,7 +53,7 @@ const Login = () => {
             />
           </div>
           <div className="px-20">
-            <Button variant="bg-teal-500">Masuk</Button>
+            <Button variant="bg-teal-500 text-2xl">Masuk</Button>
           </div>
           <p className="text-white text-sm mt-10 text-center">
             Belum punya akun?

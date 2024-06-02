@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import NavbarDashboard from "../components/Fragments/NavbarDashboard";
-import Sidebar2 from "../components/Layouts/Sidebar";
 import ChatPsikolog from "../components/DashboardPsikolog/ChatPsikolog";
+import SidebarPsikolog from "../components/Layouts/SidebarPsikolog";
 const ChatPsikologPage = () => {
   const [open, setOpen] = useState(true);
   useEffect(() => {
@@ -11,7 +11,7 @@ const ChatPsikologPage = () => {
     <div className="min-h-screen text-slate-600">
       <NavbarDashboard />
       <div className="flex bg-light pt-20">
-        <Sidebar2 open={open} setOpen={setOpen} />
+        <SidebarPsikolog open={open} setOpen={setOpen} />
         <ChatPsikolog open={open} />
       </div>
     </div>

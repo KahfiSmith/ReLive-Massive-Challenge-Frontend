@@ -1,5 +1,3 @@
-import Button from "../Layouts/Button";
-
 const DetailRiwayatPsikolog = ({ open }) => {
   return (
     <div

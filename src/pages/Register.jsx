@@ -73,16 +73,16 @@ const Register = () => {
                         >
                             Jenis Kelamin
                         </label>
-                        <select className="w-full h-10" name="gender" required>
+                        <select className="w-full rounded-sm p-3" name="gender" required>
                             <option value="" disabled selected>-</option>
-                            <option value="male">Laki-Laki</option>
-                            <option value="female">Perempuan</option>
+                            <option value="laki-laki">Laki-Laki</option>
+                            <option value="perempuan">Perempuan</option>
                         </select>
                     </div>
                     <div to
                         className="px-20"
                     >
-                        <Button variant="bg-teal-500">Daftar</Button>
+                        <Button variant="bg-teal-500 text-2xl">Daftar</Button>
                     </div>
                     <p className="text-white text-sm mt-10 text-center">
                         Sudah punya akun?

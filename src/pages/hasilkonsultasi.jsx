@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import SidebarPsikolog from "../components/Layouts/SidebarPskikolog";
 import HasilKonsultasi from "../components/DashboardPsikolog/HasilKonsultasi";
 import NavbarDashboard from "../components/Fragments/NavbarDashboard";
+import SidebarPsikolog from "../components/Layouts/SidebarPsikolog";
 
 const HasilKonsultasiPage = () => {
     const [open, setOpen] = useState(true);
