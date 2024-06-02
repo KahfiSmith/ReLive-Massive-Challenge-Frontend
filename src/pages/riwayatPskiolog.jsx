@@ -3,6 +3,7 @@ import NavbarDashboard from "../components/Fragments/NavbarDashboard";
 import SidebarPsikolog from "../components/Layouts/SidebarPsikolog";
 import Button from "../components/Layouts/Button";
 import RiwayatPsikolog from "../components/DashboardPsikolog/RiwayatPsikolog";
+import { Link } from "react-router-dom";
 
 const RiwayatPsikologPage = () => {
   const [open, setOpen] = useState(true);
@@ -17,13 +18,15 @@ const RiwayatPsikologPage = () => {
         <RiwayatPsikolog open={open} />
       </div>
       <div
-        className="flex-grow px-8 py-5 w-1/4"
+        className="flex px-8 py-5 w-1/3"
         style={{
           marginLeft: open ? "240px" : "80px",
           transition: "margin-left 500ms ease-in-out",
         }}
       >
-        <Button variant="bg-teal-500">Buat Konsultasi Baru +</Button>
+        <Link to={"/hasil-konsultasi"}>
+          <Button variant="bg-teal-500">Buat Konsultasi Baru +</Button>
+        </Link>
       </div>
     </div>
   );

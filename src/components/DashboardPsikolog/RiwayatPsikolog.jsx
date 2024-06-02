@@ -11,7 +11,7 @@ const RiwayatPsikolog = ({ open }) => {
         <CardRiwayatPsikolog />
         <CardRiwayatPsikolog />
         <CardRiwayatPsikolog />
-        <CardRiwayatPsikolog />
+        
     </div>
   );
 };
