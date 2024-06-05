@@ -1,18 +1,56 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Logo from "../components/Layouts/Logo";
 import Button from "../components/Layouts/Button";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
   const navigate = useNavigate();
-  const handleLogin = (event) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const handleLogin = async (event) => {
     event.preventDefault();
-    navigate("/profil-user");
-  };
+    setError('');
+    try {
+        console.log('Sending login request with email:', email, 'and password:', password);
+        const response = await axios.post('http://localhost:3000/api/login', {
+            email,
+            password
+        }, { withCredentials: true });
+
+        console.log('Received response:', response);
+        if (response.status === 200) {
+            const userRole = response.data.user.role; 
+            if (userRole === "pasien") {
+                navigate("/profil-user");
+            } else if (userRole === "psikolog") {
+                navigate("/profil-psikolog");
+            } else {
+                setError('Role pengguna tidak dikenali.');
+            }
+        } else {
+            // Jika status bukan 200, lemparkan error yang akan ditangkap oleh catch
+            throw new Error(`Server responded with status: ${response.status}`);
+        }
+    } catch (error) {
+        console.error('Error logging in:', error);
+        if (error.response && error.response.status === 400) {
+            setError('Password salah. Silakan coba lagi.');
+        } else if (error.response && error.response.status === 404) {
+            setError('Email tidak ditemukan. Silakan periksa kembali email Anda.');
+        } else {
+            setError('Kesalahan saat login. Silakan coba lagi nanti.');
+        }
+    }
+};
+
 
   useEffect(() => {
     document.title = "Login";
   }, []);
+
   return (
     <div className="min-h-screen flex bg-gray-100">
       <Logo />
@@ -36,6 +74,8 @@ const Login = () => {
               id="email"
               type="email"
               placeholder="Masukkan Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="mb-4 px-20">
@@ -50,8 +90,15 @@ const Login = () => {
               id="password"
               type="password"
               placeholder="Masukkan Kata Sandi"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+          {error && (
+            <div className="px-20 mb-4 text-white">
+              {error}
+            </div>
+          )}
           <div className="px-20">
             <Button variant="bg-teal-500 text-2xl">Masuk</Button>
           </div>

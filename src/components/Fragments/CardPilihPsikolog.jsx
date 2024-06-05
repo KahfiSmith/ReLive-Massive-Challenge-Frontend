@@ -19,7 +19,7 @@ const CardPilihPsikolog = () => {
           <div className="flex justify-between gap-4 w-full items-center">
             <div className="flex justify-start gap-4">
               <Link
-                to="/chat"
+                to="/detail-chat-user"
                 className="text-white py-1 px-4 bg-teal-500 rounded-md"
               >
                 Chat

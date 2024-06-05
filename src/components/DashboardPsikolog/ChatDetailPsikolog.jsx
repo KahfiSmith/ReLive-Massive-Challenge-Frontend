@@ -1,4 +1,4 @@
-import ChatColumn from "../Layouts/ChatColumn";
+import ChatColumnPsikolog from "../Layouts/ChatColumnPsikolog";
 
 const ChatDetailPsikolog = ({ open }) => {
   return (
@@ -9,7 +9,7 @@ const ChatDetailPsikolog = ({ open }) => {
         transition: "margin-left 500ms ease-in-out",
       }}
     >
-        <ChatColumn />
+        <ChatColumnPsikolog />
 
     </div>
   );

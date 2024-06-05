@@ -25,6 +25,9 @@ import HasilKonsultasiPage from "./pages/hasilKonsultasi";
 import Register from "./pages/register";
 import ProfilPsikologPage from "./pages/profilPsikolog";
 import ProfilDetailPsikologPage from "./pages/profilDetailPsikolog";
+// import axios from "axios";
+
+// axios.defaults.withCredentials = true;
 
 const router = createBrowserRouter([
   {

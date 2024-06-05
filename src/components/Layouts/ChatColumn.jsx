@@ -8,7 +8,7 @@ const ChatColumn = () => {
       <header className="bg-teal-500 text-white p-4 flex justify-between items-center">
         <div className='flex flex-row items-center gap-5'>
           <Link to="/chat-user"><ChevronLeft color='#fff' /></Link>
-          <div className="text-lg md:text-xl font-semibold">Ms. Syindy Lee</div>
+          <div className="text-lg md:text-xl font-semibold">Max Verstappen</div>
         </div>
         <div className="flex items-center">
           <div className="mr-2">Online</div>
@@ -17,9 +17,9 @@ const ChatColumn = () => {
       </header>
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        <Column alignment="items-start" nama="Ms. Syindy Lee" pesan="Halo dik Udin, bagaimana kabarnya?" />
+        <Column alignment="items-start" nama="Max Verstappen" pesan="Halo dik Udin, bagaimana kabarnya?" />
         <Column alignment="items-end" nama="P. Yosianudin" pesan="Halo buk, akhir akhir ini saya lagi stress" />
-        <Column alignment="items-start" nama="Ms. Syindy Lee" pesan="Ada apa udin? Apakah ada yang mengganggu?" />
+        <Column alignment="items-start" nama="Max Verstappen" pesan="Ada apa udin? Apakah ada yang mengganggu?" />
         <Column alignment="items-end" nama="P. Yosianudin" pesan="Hm, iya buk. Saya sedang banyak pikiran. Teman-teman sayapun tidak ada yang mengerti. Boleh udin cerita buk?" />
       </div>
 

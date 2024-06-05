@@ -1,4 +1,4 @@
-import CardChat from "../Fragments/CardChat";
+import CardChatPsikolog from "../Fragments/CardChatPsikolog";
 
 const ChatPsikolog = ({ open }) => {
   return (
@@ -9,11 +9,12 @@ const ChatPsikolog = ({ open }) => {
         transition: "margin-left 500ms ease-in-out",
       }}
     >
-      <CardChat />
-      <CardChat />
-      <CardChat />
-      <CardChat />
-      <CardChat />
+      <CardChatPsikolog />
+      <CardChatPsikolog />
+      <CardChatPsikolog />
+      <CardChatPsikolog />
+      <CardChatPsikolog />
+
       
       
 
