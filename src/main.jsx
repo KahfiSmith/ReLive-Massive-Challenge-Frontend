@@ -25,6 +25,7 @@ import HasilKonsultasiPage from "./pages/hasilKonsultasi";
 import Register from "./pages/register";
 import ProfilPsikologPage from "./pages/profilPsikolog";
 import ProfilDetailPsikologPage from "./pages/profilDetailPsikolog";
+import ProfilDetailUserPage from "./pages/profilDetailUser";
 // import axios from "axios";
 
 // axios.defaults.withCredentials = true;
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
   {
     path: "/profil-user",
     element: <ProfilUserPage />,
+  },
+  {
+    path: "/detail-profil-user",
+    element: <ProfilDetailUserPage />,
   },
   {
     path: "/pilih-psikolog-user",

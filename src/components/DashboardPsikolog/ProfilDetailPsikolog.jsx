@@ -26,6 +26,26 @@ const ProfilDetailPsikolog = () => {
         </div>
         <div className="w-full mb-4">
           <label
+            htmlFor="jenis_kelamin"
+            className="block font-semibold text-slate-500 text-xl mb-2"
+          >
+            Jenis Kelamin
+          </label>
+          <select
+            className="w-full p-2 border-2 border-slate-500 rounded-md text-lg placeholder-user opacity-50 font-medium"
+            name="jenis_kelamin"
+            required
+            value="Laki-laki"
+          >
+            <option value="" disabled>
+              - Pilih Salah Satu -
+            </option>
+            <option value="Laki-laki">Laki-Laki</option>
+            <option value="Perempuan">Perempuan</option>
+          </select>
+        </div>
+        <div className="w-full mb-4">
+          <label
             htmlFor="spesialis"
             className="block font-semibold text-slate-500 text-xl mb-2"
           >
@@ -52,7 +72,7 @@ const ProfilDetailPsikolog = () => {
             readOnly
           />
         </div>
-        <div className="w-full">
+        <div className="w-full mb-4">
           <label
             htmlFor="Nomor Telepon"
             className="block font-semibold text-slate-500 text-xl mb-2"
@@ -66,7 +86,7 @@ const ProfilDetailPsikolog = () => {
             readOnly
           />
         </div>
-        <div className="w-full">
+        <div className="w-full mb-4">
           <label
             htmlFor="biografi"
             className="block font-semibold text-slate-500 text-xl mb-2"
@@ -80,7 +100,7 @@ const ProfilDetailPsikolog = () => {
             readOnly
           />
         </div>
-        <div className="w-full">
+        <div className="w-full mb-4">
           <label
             htmlFor="pengalaman"
             className="block font-semibold text-slate-500 text-xl mb-2"
@@ -97,7 +117,7 @@ const ProfilDetailPsikolog = () => {
       </div>
       <div className="flex justify-end items-center mb-4 px-16 pt-4">
         <Link to={"/"}>
-          <button className="bg-teal-500 hover:bg-teal-600 text-white text-xl font-semibold py-2 px-4 rounded w-40 h-11">
+          <button className="bg-teal-500 hover:bg-teal-600 text-white text-xl font-semibold p-4 rounded w-60">
             Simpan
           </button>
         </Link>

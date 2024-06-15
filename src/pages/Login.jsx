@@ -3,6 +3,7 @@ import Logo from "../components/Layouts/Logo";
 import Button from "../components/Layouts/Button";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { jwtDecode } from "jwt-decode";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -14,39 +15,47 @@ const Login = () => {
     event.preventDefault();
     setError('');
     try {
-        console.log('Sending login request with email:', email, 'and password:', password);
-        const response = await axios.post('http://localhost:3000/api/login', {
-            email,
-            password
-        }, { withCredentials: true });
-
-        console.log('Received response:', response);
-        if (response.status === 200) {
-            const userRole = response.data.user.role; 
-            if (userRole === "pasien") {
-                navigate("/profil-user");
-            } else if (userRole === "psikolog") {
-                navigate("/profil-psikolog");
-            } else {
-                setError('Role pengguna tidak dikenali.');
-            }
+      const response = await axios.post('http://localhost:3000/api/login', {
+        email,
+        password
+      }, { withCredentials: true });
+  
+      console.log('Received response:', response.data);
+      
+      if (response.status === 200) {
+        const { token, msg } = response.data;
+  
+        sessionStorage.setItem('jwtToken', token);
+        
+        if (msg === "Login berhasil") {
+          const decodedToken = jwtDecode(token);
+          const userRole = decodedToken.role;
+  
+          if (userRole === "pasien") {
+            navigate("/profil-user");
+          } else if (userRole === "psikolog") {
+            navigate("/profil-psikolog");
+          } else {
+            setError('Role pengguna tidak dikenali.');
+          }
         } else {
-            // Jika status bukan 200, lemparkan error yang akan ditangkap oleh catch
-            throw new Error(`Server responded with status: ${response.status}`);
+          setError('Terjadi kesalahan saat login.');
         }
+      } else {
+        throw new Error(`Server responded with status: ${response.status}`);
+      }
     } catch (error) {
-        console.error('Error logging in:', error);
-        if (error.response && error.response.status === 400) {
-            setError('Password salah. Silakan coba lagi.');
-        } else if (error.response && error.response.status === 404) {
-            setError('Email tidak ditemukan. Silakan periksa kembali email Anda.');
-        } else {
-            setError('Kesalahan saat login. Silakan coba lagi nanti.');
-        }
+      console.error('Error logging in:', error);
+      if (error.response && error.response.status === 400) {
+        setError('Password salah. Silakan coba lagi.');
+      } else if (error.response && error.response.status === 404) {
+        setError('Email tidak ditemukan. Silakan periksa kembali email Anda.');
+      } else {
+        setError('Kesalahan saat login. Silakan coba lagi nanti.');
+      }
     }
-};
-
-
+  };
+  
   useEffect(() => {
     document.title = "Login";
   }, []);

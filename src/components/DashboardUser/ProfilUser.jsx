@@ -1,7 +1,13 @@
+import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
 import CardUserProfil from "../Fragments/CardUserProfil";
 
 const ProfilUser = ({ open }) => {
+  const token = sessionStorage.getItem("jwtToken");
+  const decodedToken = jwtDecode(token);
+  const nama_lengkap = decodedToken.nama_lengkap; 
+  const jenis_kelamin = decodedToken.jenis_kelamin; 
+
   return (
     <div
       className="flex-grow"
@@ -20,13 +26,13 @@ const ProfilUser = ({ open }) => {
           />
         </div>
         <div className="absolute left-1/2 bottom-[50px] transform -translate-x-1/2 text-center">
-          <h2 className="text-3xl font-bold text-teal-500 mt-4">John Doe</h2>
-          <p className="text-base font-medium text-gray-600">Laki-Laki</p>
+          <h2 className="text-3xl font-bold text-teal-500 mt-4">{nama_lengkap}</h2>
+          <p className="text-base font-medium text-gray-600">{jenis_kelamin}</p>
         </div>
       </div>
       <CardUserProfil />
       <div className="flex justify-end px-44 items-center mb-4">
-        <Link to={"/profil-user-edit"}>
+        <Link to={"/detail-profil-user"}>
           <button className="bg-teal-500 hover:bg-teal-600 text-white text-xl font-semibold py-2 px-4 rounded w-40 h-11">
             Edit
           </button>
