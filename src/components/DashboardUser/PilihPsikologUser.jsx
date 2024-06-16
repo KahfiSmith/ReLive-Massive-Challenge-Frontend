@@ -1,4 +1,4 @@
-import CardPilihPsikiater from "../Fragments/CardPilihPsikolog";
+import CardPilihPsikolog from "../Fragments/CardPilihPsikolog";
 
 const PilihPsikologUser = ({open}) => {
   return (
@@ -9,12 +9,8 @@ const PilihPsikologUser = ({open}) => {
         transition: "margin-left 500ms ease-in-out",
       }}
     >
-      <div className="grid grid-cols-2 px-12 py-12 justify-between mb-8">
-        <CardPilihPsikiater/>
-        <CardPilihPsikiater/>
-        <CardPilihPsikiater/>
-        <CardPilihPsikiater/>
-        <CardPilihPsikiater/>
+      <div className="p-10 justify-between mb-8">
+        <CardPilihPsikolog/>
       </div>
     </div>
   );

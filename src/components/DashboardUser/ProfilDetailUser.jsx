@@ -1,15 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import moment from "moment";
 
 const ProfilDetailUser = () => {
-  const [namaLengkap, setNamaLengkap] = React.useState("");
-  const [tanggalLahir, setTanggalLahir] = React.useState("");
-  const [nomorTelepon, setNomorTelepon] = React.useState("");
-  const [jenisKelamin, setJenisKelamin] = React.useState("");
+  const [namaLengkap, setNamaLengkap] = useState("");
+  const [tanggalLahir, setTanggalLahir] = useState("");
+  const [nomorTelepon, setNomorTelepon] = useState("");
+  const [jenisKelamin, setJenisKelamin] = useState("");
+  const [userUuid, setUserUuid] = useState("");
+  const navigate = useNavigate();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const token = sessionStorage.getItem("jwtToken");
     if (token) {
       try {
@@ -17,7 +19,7 @@ const ProfilDetailUser = () => {
         setNamaLengkap(decodedToken.nama_lengkap || "");
         setNomorTelepon(decodedToken.nomer_telepon || "");
         setJenisKelamin(decodedToken.jenis_kelamin || "");
-
+        setUserUuid(decodedToken.uuid || "");
         if (decodedToken.tanggal_lahir) {
           const formattedDate = moment(decodedToken.tanggal_lahir).format(
             "YYYY-MM-DD"
@@ -31,6 +33,36 @@ const ProfilDetailUser = () => {
       }
     }
   }, []);
+
+  const handleSave = async () => {
+    const updatedData = {
+      nama_lengkap: namaLengkap,
+      jenis_kelamin: jenisKelamin,
+      tanggal_lahir: tanggalLahir,
+      nomer_telepon: nomorTelepon,
+    };
+
+    const response = await fetch(
+      `http://localhost:3000/api/profile-user-edit/${userUuid}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${sessionStorage.getItem("jwtToken")}`,
+        },
+        body: JSON.stringify(updatedData),
+      }
+    );
+
+    const data = await response.json();
+    if (response.ok) {
+      sessionStorage.setItem("jwtToken", data.token);
+      alert("Profil berhasil diperbarui");
+      navigate("/detail-profil-user");
+    } else {
+      alert(data.msg);
+    }
+  };
 
   return (
     <div
@@ -74,7 +106,7 @@ const ProfilDetailUser = () => {
               - Pilih Salah Satu -
             </option>
             <option value="Laki-laki">Laki-Laki</option>
-            <option value="erempuan">Perempuan</option>
+            <option value="Perempuan">Perempuan</option>
           </select>
         </div>
         <div className="w-full mb-4">
@@ -108,8 +140,11 @@ const ProfilDetailUser = () => {
         </div>
       </div>
       <div className="flex justify-end items-center mb-4 px-16 pt-4">
-        <Link to={"/"}>
-          <button className="bg-teal-500 hover:bg-teal-600 text-white text-xl font-semibold p-4 rounded w-60">
+        <Link to={"/detail-profil-user"}>
+          <button
+            onClick={handleSave}
+            className="bg-teal-500 hover:bg-teal-600 text-white text-xl font-semibold p-4 rounded w-60"
+          >
             Simpan
           </button>
         </Link>

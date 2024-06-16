@@ -3,7 +3,7 @@ import CardKomunitas from '../Fragments/CardKomunitas';
 const KomunitasForm = () => {
   return (
     <div>
-        <div className="px-8 min-h-screen">
+        <div className="px-8 py-20">
             <div className="flex gap-3 items-center w-max-full h-auto">
                 <div className="rounded-full bg-[#5EAB80] w-[5rem] h-[5rem]"></div>
                 <div className="rounded-full bg-[#5EAB80] w-[3rem] h-[3rem]"></div>
