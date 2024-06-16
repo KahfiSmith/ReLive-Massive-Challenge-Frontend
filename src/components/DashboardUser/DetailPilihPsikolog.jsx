@@ -38,8 +38,12 @@ const DetailPilihPsikolog = ({ open }) => {
         <div className="grid grid-cols-2 gap-6 py-12 px-12 items-center">
           <div className="flex justify-center">
             <img
-              src="/images/psikolog-man.png"
-              alt=""
+              src={
+                psikolog.jenis_kelamin === "Laki-laki"
+                  ? "/images/psikolog-man.png"
+                  : "/images/psikolog-woman.png"
+              }
+              alt="Psikolog"
               className="rounded-full w-50"
             />
           </div>

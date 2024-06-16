@@ -74,9 +74,9 @@ const CardPilihPsikolog = () => {
               <div className="flex flex-col justify-between">
                 <div className="text-2xl">
                   <div className="mb-1 font-semibold">{item.nama_lengkap}</div>
-                  <p className="mb-1 text-xl">{item.biografi}</p>
+                  <p className="mb-1 text-lg">{item.biografi.slice(0, 100)}</p>
                   <p className="text-base">
-                  {item.pengalaman.slice(0, 50)}
+                  {item.pengalaman}
                   </p>
                 </div>
               </div>
