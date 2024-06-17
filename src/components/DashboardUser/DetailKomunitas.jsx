@@ -1,4 +1,5 @@
-import KomunitasForm from "../Layouts/KomunitasForm";
+// import KomunitasForm from "../Layouts/KomunitasForm";
+import KomunitasMain from "../Layouts/KomunitasMain";
 
 const DetailKomunitas = ({ open }) => {
   return (
@@ -9,7 +10,7 @@ const DetailKomunitas = ({ open }) => {
         transition: "margin-left 500ms ease-in-out",
       }}
     >
-        <KomunitasForm />
+        <KomunitasMain />
         
     </div>
   );

@@ -84,7 +84,6 @@ const ProfilDetailUser = () => {
             type="text"
             value={namaLengkap}
             onChange={(e) => setNamaLengkap(e.target.value)}
-            placeholder="John Doe"
             className="w-full p-2 border-2 border-slate-500 rounded-md text-lg"
           />
         </div>
@@ -134,7 +133,6 @@ const ProfilDetailUser = () => {
             type="tel"
             value={nomorTelepon}
             onChange={(e) => setNomorTelepon(e.target.value)}
-            placeholder="081234567899"
             className="w-full p-2 border-2 border-slate-500 rounded-md text-lg"
           />
         </div>
