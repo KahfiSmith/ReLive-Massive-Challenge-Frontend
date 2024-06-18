@@ -7,7 +7,7 @@ const CardUserProfil = () => {
   const [tanggalLahir, setTanggalLahir] = useState("");
   const [nomorTelepon, setNomorTelepon] = useState("");
   const [umur, setUmur] = useState("");
-
+  
   useEffect(() => {
     const loadProfileData = () => {
       const token = sessionStorage.getItem("jwtToken");

@@ -76,7 +76,7 @@ const CardPilihPsikolog = () => {
                   <div className="mb-1 font-semibold">{item.nama_lengkap}</div>
                   <p className="mb-1 text-lg">{item.biografi.slice(0, 100)}</p>
                   <p className="text-base">
-                  {item.pengalaman}
+                  {item.pengalaman} Tahun
                   </p>
                 </div>
               </div>

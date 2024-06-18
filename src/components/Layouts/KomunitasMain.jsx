@@ -30,7 +30,7 @@ const KomunitasMain = () => {
 
     const data = await response.json();
     if (response.ok) {
-      alert("Forum berhasil ditambahkan!");
+      alert("Catatan berhasil ditambahkan!");
       fetchForums(); 
     } else {
       console.error("Error:", data.msg);
