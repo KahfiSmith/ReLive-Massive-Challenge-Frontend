@@ -59,10 +59,10 @@ const CardPilihPsikolog = () => {
                     Lihat Profil
                   </Link>
                 </div>
-                <div className="flex justify-start gap-2 items-center">
+                {/* <div className="flex justify-start gap-2 items-center">
                   <div className="online"></div>
                   <span className="text-slate-500 font-medium">Online</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

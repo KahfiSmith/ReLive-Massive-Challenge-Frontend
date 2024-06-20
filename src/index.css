@@ -21,7 +21,7 @@ body::-webkit-scrollbar {
 }
 
 .grid-layanan-icon {
-  @apply w-12 h-12 p-3 flex items-center justify-center rounded-md text-black;
+  @apply w-12 h-12 p-1 flex items-center justify-center rounded-md text-black;
 }
 
 .navbar-item {
@@ -70,4 +70,8 @@ body::-webkit-scrollbar {
 
 .online {
   @apply h-3 w-3 bg-teal-400 rounded-full
+}
+
+.custom-icon-size {
+  font-size: 3rem;
 }

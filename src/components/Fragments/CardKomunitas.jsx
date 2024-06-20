@@ -15,9 +15,9 @@ const CardKomunitas = ({ nama, waktu, catatan }) => {
           <p className="text-xs md:text-sm lg:text-base">{catatan}</p>
         </div>
         <div className="flex space-x-4 mb-6 text-sm font-medium items-center">
-          <button className="h-10 px-6 font-semibold rounded-md bg-[#5EAB80] border border-slate-200 text-white" type="button">
+          {/* <button className="h-10 px-6 font-semibold rounded-md bg-[#5EAB80] border border-slate-200 text-white" type="button">
             Tanggapi
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
