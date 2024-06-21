@@ -9,8 +9,6 @@ const RiwayatPsikolog = ({ open }) => {
       }}
     >
         <CardRiwayatPsikolog />
-        <CardRiwayatPsikolog />
-        <CardRiwayatPsikolog />
         
     </div>
   );
