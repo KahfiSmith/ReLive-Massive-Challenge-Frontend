@@ -38,7 +38,7 @@ const CardRiwayatPsikolog = () => {
         <Link to={"/detail-riwayat-psikolog"} key={index} className="block">
           <div className="bg-cyan-700 text-white rounded-lg p-5 my-2 flex items-center hover:bg-cyan-800 transition duration-300">
             <div className="flex-grow">
-              <div className="flex justify-between items-center mb-2">
+              <div className="flex justify-between items-center">
                 <h3 className="text-base md:text-lg lg:text-xl font-bold">
                   {item.hipotesis}
                 </h3>
@@ -49,7 +49,7 @@ const CardRiwayatPsikolog = () => {
                   )}
                 </span>
               </div>
-              <p className="text-xs md:text-sm lg:text-base mb-4">
+              <p className="text-xs md:text-sm lg:text-xl mb-10 font-semibold">
                 {item.nama_lengkap}
               </p>
               <div className="flex justify-between items-center">

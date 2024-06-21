@@ -53,7 +53,7 @@ const CardRiwayat = () => {
                 )}
               </h3>
             </div>
-            <p className="text-xs md:text-sm lg:text-lg mb-4 font-semibold">
+            <p className="text-xs md:text-sm lg:text-lg mb-10 font-semibold">
               {item.nama_lengkap}
             </p>
             <div className="flex justify-between items-center">
