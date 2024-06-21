@@ -9,10 +9,6 @@ const RiwayatUser = ({ open }) => {
       }}
     >
         <CardRiwayat />
-        <CardRiwayat />
-        <CardRiwayat />
-        <CardRiwayat />
-        <CardRiwayat />
     </div>
   );
 };

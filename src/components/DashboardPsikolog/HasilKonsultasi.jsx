@@ -31,11 +31,31 @@ const HasilKonsultasi = ({ open }) => {
   }, []);
 
   const handleInputChange = (event) => {
-    const { name, value, type, checked } = event.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: type === 'checkbox' ? checked : value
-    }));
+    const { name, type, checked } = event.target;
+    if (type === 'checkbox') {
+      setFormData(prevState => ({
+        ...prevState,
+        [name]: checked ? event.target.getAttribute('data-value') : ''
+      }));
+    } else {
+      setFormData(prevState => ({
+        ...prevState,
+        [name]: event.target.value
+      }));
+    }
+  };
+
+  const resetForm = () => {
+    setFormData({
+      id_pasien: '',
+      tanggal: '',
+      hipotesis: '',
+      kategori: '',
+      catatan: '',
+      simpulan: '',
+      simpulann: ''
+    });
+    setErrors({});
   };
 
   const validateForm = () => {
@@ -64,7 +84,7 @@ const HasilKonsultasi = ({ open }) => {
       },
       body: JSON.stringify({
         id_pasien,
-        id_user,
+        id_psikolog: id_user,
         tanggal,
         hipotesis,
         kategori,
@@ -77,6 +97,7 @@ const HasilKonsultasi = ({ open }) => {
     .then(data => {
       if (data.success) {
         alert('Konsultasi berhasil disimpan.');
+        resetForm(); 
       } else {
         alert('Gagal menyimpan konsultasi: ' + data.message);
       }
@@ -102,6 +123,7 @@ const HasilKonsultasi = ({ open }) => {
           </div>
         </div>
         <form className="space-y-6" onSubmit={handleSubmit}>
+          <input type="hidden" value={id_user} name="id_user" />
           <div>
             <label className="block text-lg font-medium text-teal-500">
               Nama Klien
@@ -110,7 +132,9 @@ const HasilKonsultasi = ({ open }) => {
               name="id_pasien"
               value={formData.id_pasien}
               onChange={handleInputChange}
-              className={`mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm ${errors.id_pasien && 'border-red-500'}`}
+              className={`mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm ${
+                errors.id_pasien && "border-red-500"
+              }`}
             >
               <option value="">Pilih Klien</option>
               {patients.map((patient) => (
@@ -119,7 +143,9 @@ const HasilKonsultasi = ({ open }) => {
                 </option>
               ))}
             </select>
-            {errors.id_pasien && <p className="text-red-500 text-sm">{errors.id_pasien}</p>}
+            {errors.id_pasien && (
+              <p className="text-red-500 text-sm">{errors.id_pasien}</p>
+            )}
           </div>
           <div>
             <label className="block text-lg font-medium text-teal-500">
@@ -130,9 +156,13 @@ const HasilKonsultasi = ({ open }) => {
               name="tanggal"
               value={formData.tanggal}
               onChange={handleInputChange}
-              className={`mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm ${errors.tanggal && 'border-red-500'}`}
+              className={`mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm ${
+                errors.tanggal && "border-red-500"
+              }`}
             />
-            {errors.tanggal && <p className="text-red-500 text-sm">{errors.tanggal}</p>}
+            {errors.tanggal && (
+              <p className="text-red-500 text-sm">{errors.tanggal}</p>
+            )}
           </div>
           <div>
             <label className="block text-lg font-medium text-teal-500">
@@ -143,9 +173,13 @@ const HasilKonsultasi = ({ open }) => {
               name="hipotesis"
               value={formData.hipotesis}
               onChange={handleInputChange}
-              className={`mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm ${errors.hipotesis && 'border-red-500'}`}
+              className={`mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm ${
+                errors.hipotesis && "border-red-500"
+              }`}
             />
-            {errors.hipotesis && <p className="text-red-500 text-sm">{errors.hipotesis}</p>}
+            {errors.hipotesis && (
+              <p className="text-red-500 text-sm">{errors.hipotesis}</p>
+            )}
           </div>
           <div>
             <label className="block text-lg font-medium text-teal-500">
@@ -155,14 +189,18 @@ const HasilKonsultasi = ({ open }) => {
               name="kategori"
               value={formData.kategori}
               onChange={handleInputChange}
-              className={`mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm ${errors.kategori && 'border-red-500'}`}
+              className={`mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm ${
+                errors.kategori && "border-red-500"
+              }`}
             >
               <option value="">Pilih Kategori</option>
               <option value="Ringan">Ringan</option>
               <option value="Sedang">Sedang</option>
               <option value="Berat">Berat</option>
             </select>
-            {errors.kategori && <p className="text-red-500 text-sm">{errors.kategori}</p>}
+            {errors.kategori && (
+              <p className="text-red-500 text-sm">{errors.kategori}</p>
+            )}
           </div>
           <div>
             <label className="block text-lg font-medium text-teal-500">
@@ -172,35 +210,40 @@ const HasilKonsultasi = ({ open }) => {
               name="catatan"
               value={formData.catatan}
               onChange={handleInputChange}
-              className={`mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm ${errors.catatan && 'border-red-500'}`}
+              className={`mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm ${
+                errors.catatan && "border-red-500"
+              }`}
             ></textarea>
-            {errors.catatan && <p className="text-red-500 text-sm">{errors.catatan}</p>}
+            {errors.catatan && (
+              <p className="text-red-500 text-sm">{errors.catatan}</p>
+            )}
           </div>
-          <div>
-            <label className="block text-lg font-medium text-teal-500">
-              Simpulan 1
-            </label>
-            <input
-              type="text"
-              name="simpulan"
-              value={formData.simpulan}
-              onChange={handleInputChange}
-              className={`mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm ${errors.simpulan && 'border-red-500'}`}
-            />
-            {errors.simpulan && <p className="text-red-500 text-sm">{errors.simpulan}</p>}
-          </div>
-          <div>
-            <label className="block text-lg font-medium text-teal-500">
-              Simpulan 2
-            </label>
-            <input
-              type="text"
-              name="simpulann"
-              value={formData.simpulann}
-              onChange={handleInputChange}
-              className={`mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm ${errors.simpulann && 'border-red-500'}`}
-            />
-            {errors.simpulann && <p className="text-red-500 text-sm">{errors.simpulann}</p>}
+          <div className="space-y-4">
+            <div className="flex items-center text-teal-500">
+              <input
+                type="checkbox"
+                className="mr-2"
+                name="simpulan"
+                checked={formData.simpulan === "Membutuhkan Obat"}
+                onChange={handleInputChange}
+                data-value="Membutuhkan Obat"
+              />
+              <p>Membutuhkan Obat</p>
+            </div>
+            <div className="flex items-center text-teal-500">
+              <input
+                type="checkbox"
+                className="mr-2"
+                name="simpulann"
+                checked={
+                  formData.simpulann ===
+                  "Membutuhkan Rujukan ke Dokter/Psikiater"
+                }
+                onChange={handleInputChange}
+                data-value="Membutuhkan Rujukan ke Dokter/Psikiater"
+              />
+              <p>Membutuhkan Rujukan ke Dokter/Psikiater</p>
+            </div>
           </div>
           <div className="flex justify-end">
             <Button
