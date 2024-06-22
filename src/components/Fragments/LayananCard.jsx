@@ -1,4 +1,3 @@
-// ServiceComponents.jsx
 import { AudioLines, FolderLock, HandHeart } from 'lucide-react';
 
 export const Header = () => (

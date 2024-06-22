@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import Button from "../Layouts/Button";
+// import Button from "../Layouts/Button";
 
 const DetailRiwayatPsikolog = ({ open }) => {
   const [detail, setDetail] = useState(null);
@@ -71,9 +71,9 @@ const DetailRiwayatPsikolog = ({ open }) => {
               Saudara {detail.nama_pasien} {detail.hipotesis} {detail.kategori}. {detail.simpulan}, {detail.simpulann}.
             </p>
           </div>
-          <div className="col-span-3">
+          {/* <div className="col-span-3">
             <Button variant="bg-teal-500">Lanjutkan!</Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

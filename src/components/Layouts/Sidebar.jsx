@@ -4,7 +4,7 @@ import {
   LogOut,
   UserPlus,
   UserSearch,
-  MessageSquareText,
+  // MessageSquareText,
   ChevronsLeft,
   ChevronsRight,
 } from "lucide-react";
@@ -32,7 +32,7 @@ const Sidebar = ({ open, setOpen }) => {
       link: "/pilih-psikolog-user",
       icon: <UserSearch size={20} />,
     },
-    { name: "Chat", link: "/chat-user", icon: <MessageSquareText size={20} /> },
+    // { name: "Chat", link: "/chat-user", icon: <MessageSquareText size={20} /> },
     { name: "Riwayat", link: "/riwayat-user", icon: <History size={20} /> },
     {
       name: "Kawan ReLive",

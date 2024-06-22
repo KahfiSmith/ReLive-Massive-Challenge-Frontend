@@ -1,7 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
 
-
 const DetailPilihPsikolog = ({ open }) => {
   const { uuid } = useParams();
   const [psikolog, setPsikolog] = useState(null);

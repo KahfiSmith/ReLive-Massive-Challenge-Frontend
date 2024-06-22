@@ -4,7 +4,7 @@ import {
   LogOut,
   ChevronsLeft,
   ChevronsRight,
-  MessageSquareText,
+  // MessageSquareText,
 } from "lucide-react";
 import { NavLink, useNavigate } from "react-router-dom";
 
@@ -25,7 +25,7 @@ const SidebarPsikolog = ({ open, setOpen }) => {
       link: "/profil-psikolog",
       icon: <CircleUser size={20} />,
     },
-    { name: "Chat", link: "/chat-psikolog", icon: <MessageSquareText size={20} /> },
+    // { name: "Chat", link: "/chat-psikolog", icon: <MessageSquareText size={20} /> },
     { name: "Riwayat", link: "/riwayat-psikolog", icon: <History size={20} /> },
     { 
       name: "Keluar", 
