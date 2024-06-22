@@ -35,7 +35,7 @@ const CardRiwayatPsikolog = () => {
   return (
     <div className="max-w-screen my-4 mx-auto">
       {riwayat.map((item, index) => (
-        <Link to={"/detail-riwayat-psikolog"} key={index} className="block">
+        <Link to={`/detail-riwayat-psikolog/${item.id_konsultasi}`} key={index} className="block">
           <div className="bg-cyan-700 text-white rounded-lg p-5 my-2 flex items-center hover:bg-cyan-800 transition duration-300">
             <div className="flex-grow">
               <div className="flex justify-between items-center">

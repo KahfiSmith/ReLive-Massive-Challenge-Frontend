@@ -10,10 +10,6 @@ const ChatPsikolog = ({ open }) => {
       }}
     >
       <CardChatPsikolog />
-      <CardChatPsikolog />
-      <CardChatPsikolog />
-      <CardChatPsikolog />
-      <CardChatPsikolog />
 
       
       

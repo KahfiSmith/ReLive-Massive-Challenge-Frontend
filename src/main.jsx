@@ -85,7 +85,7 @@ const router = createBrowserRouter([
     element: <RiwayatUserPage />,
   },
   {
-    path: "/detail-riwayat-user",
+    path: "/detail-riwayat-user/:id_konsultasi",
     element: <RiwayatDetailUserPage />,
   },
   {
@@ -109,7 +109,7 @@ const router = createBrowserRouter([
     element: <RiwayatPsikologPage />,
   },
   {
-    path: "/detail-riwayat-psikolog",
+    path: "/detail-riwayat-psikolog/:id_konsultasi",
     element: <RiwayatDetailPsikologPage />,
   },
   {

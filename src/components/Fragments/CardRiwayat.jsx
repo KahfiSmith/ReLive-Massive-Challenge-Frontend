@@ -30,7 +30,7 @@ const CardRiwayat = () => {
     return <div>Loading...</div>;
   }
 
-  const dateOptions = { day: "2-digit", month: "long", year: "numeric" }; // Options to format the date
+  const dateOptions = { day: "2-digit", month: "long", year: "numeric" }; 
 
   return (
     <div className="max-w-screen my-4 mx-auto">
@@ -57,7 +57,7 @@ const CardRiwayat = () => {
               {item.nama_lengkap}
             </p>
             <div className="flex justify-between items-center">
-              <Link to={"/detail-riwayat-user"}>
+            <Link to={`/detail-riwayat-user/${item.id_konsultasi}`}>
                 <button
                   className="text-xs md:text-sm lg:text-base px-3 md:px-6 font-semibold rounded-md bg-teal-600 hover:bg-teal-700 text-white py-2"
                   type="submit"
