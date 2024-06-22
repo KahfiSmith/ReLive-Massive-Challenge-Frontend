@@ -46,38 +46,20 @@ const CardPilihPsikolog = () => {
               </p>
               <div className="flex justify-between gap-4 w-full items-center">
                 <div className="flex justify-start gap-4">
-                  <Link
-                    to="/detail-chat-user"
+                  <a
+                    href={`https://wa.me/${item.jenis_kelamin === "Laki-laki" ? "6282170096964" : "6285882270980"}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-white py-1 px-4 bg-teal-500 rounded-md"
                   >
                     Chat
-                  </Link>
+                  </a>
                   <Link
                     to={`/detail-pilih-psikolog-user/${item.uuid}`}
                     className="text-white py-1 px-4 bg-teal-500 rounded-md w-full"
                   >
                     Lihat Profil
                   </Link>
-                </div>
-                {/* <div className="flex justify-start gap-2 items-center">
-                  <div className="online"></div>
-                  <span className="text-slate-500 font-medium">Online</span>
-                </div> */}
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-teal-500 p-8 rounded-lg shadow-md text-white w-full">
-            <h2 className="text-3xl font-semibold mb-4">Profil Singkat</h2>
-            <div className="flex">
-              <div className="border-l-4 border-white h-auto self-stretch mr-8"></div>
-              <div className="flex flex-col justify-between">
-                <div className="text-2xl">
-                  <div className="mb-1 font-semibold">{item.nama_lengkap}</div>
-                  <p className="mb-1 text-lg">{item.biografi.slice(0, 100)}</p>
-                  <p className="text-base">
-                  {item.pengalaman} Tahun
-                  </p>
                 </div>
               </div>
             </div>
