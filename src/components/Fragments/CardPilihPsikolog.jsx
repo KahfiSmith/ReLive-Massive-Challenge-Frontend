@@ -64,6 +64,21 @@ const CardPilihPsikolog = () => {
               </div>
             </div>
           </div>
+          <div className="bg-teal-500 p-8 rounded-lg shadow-md text-white w-full">
+            <h2 className="text-3xl font-semibold mb-4">Profil Singkat</h2>
+            <div className="flex">
+              <div className="border-l-4 border-white h-auto self-stretch mr-8"></div>
+              <div className="flex flex-col justify-between">
+                <div className="text-2xl">
+                  <div className="mb-1 font-semibold">{item.nama_lengkap}</div>
+                  <p className="mb-1 text-lg">{item.biografi.slice(0, 100)}</p>
+                  <p className="text-base">
+                  {item.pengalaman} Tahun
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       ))}
     </div>
