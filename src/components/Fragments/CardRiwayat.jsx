@@ -27,7 +27,7 @@ const CardRiwayat = () => {
   }, []);
 
   if (riwayat.length === 0) {
-    return <div>Loading...</div>;
+    return <div>Belum ada riwayat</div>;
   }
 
   const dateOptions = { day: "2-digit", month: "long", year: "numeric" }; 

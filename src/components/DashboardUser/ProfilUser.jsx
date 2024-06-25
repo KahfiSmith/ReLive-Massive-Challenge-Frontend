@@ -22,7 +22,7 @@ const ProfilUser = ({ open }) => {
           <img
             src={
               jenis_kelamin === "Laki-laki"
-                ? "/images/psikolog-man.png"
+                ? "/images/user.jpg"
                 : "/images/psikolog-woman.png"
             }
             alt="Profile Image"
