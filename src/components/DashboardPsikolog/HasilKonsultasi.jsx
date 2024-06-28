@@ -96,7 +96,7 @@ const HasilKonsultasi = ({ open }) => {
     .then(response => response.json())
     .then(data => {
       if (data.success) {
-        alert('Konsultasi berhasil disimpan.');
+        alert('Konsultasi berhasil ditambahkan');
         resetForm(); 
       } else {
         alert('Gagal menyimpan konsultasi: ' + data.message);
