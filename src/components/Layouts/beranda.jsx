@@ -4,7 +4,7 @@ const Beranda = () => {
       <div className="container">
         <div className="w-full self-center px-8 md:px-12 lg:px-20 -mb-5">
           <h1 className="font-bold text-2xl mt-3 mb-2 md:text-3xl lg:text-5xl md:text-center">
-            Berdialog tentang <span className="text-icon">Kesehatan</span>
+            Berdialog Tentang <span className="text-icon">Kesehatan</span>
           </h1>
           <h1 className="font-bold text-2xl mb-4 md:text-3xl lg:text-5xl md:text-center">
             Bersama Kami Setiap Langkahnya
